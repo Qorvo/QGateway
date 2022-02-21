@@ -1,0 +1,5 @@
+
+document revisions:
+-------------------
+User Manuals/GP_P1053_AN_14876_Open_Thread.pdf                                                       - rev. 1.8
+../GP_P1053_RN_15263_Smart_Home_Gateway_OpenThread_Lib.pdf                                           - rev. 1.18

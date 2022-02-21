@@ -1,0 +1,33 @@
+Package created from:
+Applications/P959_OpenThread/v1.1.23.0/apps/lib_qorvo/gp712_rpi_cli_ftd_socket.py - CL 187624
+
+Components in source:
+---------------------
+gpAssert                       - Components/Qorvo/OS/v2.10.2.0
+gpBaseComps                    - Components/Qorvo/OS/v2.10.2.0
+gpBsp                          - Components/Qorvo/BSP/v2.10.2.0
+gpBspCommon                    - Components/Qorvo/BSP/v2.10.2.0
+gpCom                          - Components/Qorvo/BaseUtils/v2.10.2.0
+gpEncryption                   - Components/Qorvo/BaseUtils/v2.10.2.0
+gpLog                          - Components/Qorvo/OS/v2.10.2.0
+gpMacCore                      - Components/Qorvo/802_15_4/v2.10.2.0
+gpMacDispatcher                - Components/Qorvo/802_15_4/v2.10.2.0
+gpPad                          - Components/Qorvo/HAL_RF/v2.10.2.0
+gpPd                           - Components/Qorvo/HAL_RF/v2.10.2.0
+gpPoolMem                      - Components/Qorvo/OS/v2.10.2.0
+gpRandom                       - Components/Qorvo/BaseUtils/v2.10.2.0
+gpReset                        - Components/Qorvo/OS/v2.10.2.0
+gpRxArbiter                    - Components/Qorvo/802_15_4/v2.10.2.0
+gpSched                        - Components/Qorvo/OS/v2.10.2.0
+gpStat                         - Components/Qorvo/BaseUtils/v2.10.2.0
+gpUtils                        - Components/Qorvo/BaseUtils/v2.10.2.0
+gpVersion                      - Components/Qorvo/OS/v2.10.2.0
+gpWmrk                         - Components/Qorvo/BaseUtils/v2.10.2.0
+gphal                          - Components/Qorvo/HAL_RF/v2.10.2.0
+halLinux                       - Components/Qorvo/HAL_PLATFORM/v2.10.2.0
+qvOT                           - Applications/P959_OpenThread/v1.1.23.0
+
+Repositories:
+---------------------
+P959_ot-qorvo                  - P959_ot-qorvo/v1.1.2.0
+

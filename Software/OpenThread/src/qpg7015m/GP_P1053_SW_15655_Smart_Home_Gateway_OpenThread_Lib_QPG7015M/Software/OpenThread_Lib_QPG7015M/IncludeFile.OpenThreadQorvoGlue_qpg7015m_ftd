@@ -1,0 +1,211 @@
+# To be used with an 'include' statement in another makefile
+#Generated from:
+# $(OPENTHREADQORVOGLUE_QPG7015M_FTD_PATH)/code/Applications/P959_OpenThread/apps/lib_qorvo/libopenthread_qpg7015m_rpi_ftd.py
+
+PYTHON_BIN?=/mnt/c/gpHub/devenv/qbin/virtualenv/bin/python3
+
+CONFIG_HEADER:=$(OPENTHREADQORVOGLUE_QPG7015M_FTD_PATH)/code/Work/Applications/OpenThreadQorvoGlue_qpg7015m_ftd/gen/qorvo_config.h
+INTERNALS_HEADER:=$(OPENTHREADQORVOGLUE_QPG7015M_FTD_PATH)/code/Work/Applications/OpenThreadQorvoGlue_qpg7015m_ftd/gen/qorvo_internals.h
+PREINCLUDE_HEADER:=$(OPENTHREADQORVOGLUE_QPG7015M_FTD_PATH)/code/Work/Applications/OpenThreadQorvoGlue_qpg7015m_ftd/gen/qorvo_config.h
+
+#Compilation flags are defined in /mnt/c/WS_P1053_v1_5_0_0/Work/Applications/OpenThreadQorvoGlue_qpg7015m_ftd/gen/qorvo_config.h
+FLAGS=
+FLAGS+=-DGP_CONFIG_HEADER
+
+PREBUILD_SCRIPT:=
+
+POSTBUILD_SCRIPT:=
+
+#Component sources
+#Depends on:
+# src: gpLog
+COMPS+=gpAssert
+INC_gpAssert:=
+INC_gpAssert+=-I$(OPENTHREADQORVOGLUE_QPG7015M_FTD_PATH)/code/Components/Qorvo/OS/gpAssert/inc
+INC+=$(INC_gpAssert)
+
+
+#Depends on:
+# src: 
+COMPS+=gpBaseComps
+INC_gpBaseComps:=
+INC_gpBaseComps+=-I$(OPENTHREADQORVOGLUE_QPG7015M_FTD_PATH)/code/Components/Qorvo/OS/gpBaseComps/inc
+INC+=$(INC_gpBaseComps)
+
+
+#Depends on:
+# src: gpBspCommon
+COMPS+=gpBsp
+INC_gpBsp:=
+INC_gpBsp+=-I$(OPENTHREADQORVOGLUE_QPG7015M_FTD_PATH)/code/Components/Qorvo/BSP/gpBsp/inc
+INC+=$(INC_gpBsp)
+
+
+#Depends on:
+# src: 
+COMPS+=gpBspCommon
+INC_gpBspCommon:=
+INC_gpBspCommon+=-I$(OPENTHREADQORVOGLUE_QPG7015M_FTD_PATH)/code/Components/Qorvo/BSP/gpBspCommon/inc
+INC_gpBspCommon+=-I$(OPENTHREADQORVOGLUE_QPG7015M_FTD_PATH)/code/Work/Applications/OpenThreadQorvoGlue_qpg7015m_ftd/gen/gpBsp/inc
+INC+=$(INC_gpBspCommon)
+
+
+#Depends on:
+# src: gpAssert, gpLog, gpUtils
+COMPS+=gpCom
+INC_gpCom:=
+INC_gpCom+=-I$(OPENTHREADQORVOGLUE_QPG7015M_FTD_PATH)/code/Components/Qorvo/BaseUtils/gpCom/inc
+INC_gpCom+=-I$(OPENTHREADQORVOGLUE_QPG7015M_FTD_PATH)/code/Components/Qorvo/BaseUtils/gpCom/inc/gen
+INC+=$(INC_gpCom)
+
+
+#Depends on:
+# src: gpPd, gphal
+COMPS+=gpEncryption
+INC_gpEncryption:=
+INC_gpEncryption+=-I$(OPENTHREADQORVOGLUE_QPG7015M_FTD_PATH)/code/Components/Qorvo/BaseUtils/gpEncryption/inc
+INC+=$(INC_gpEncryption)
+
+
+#Depends on:
+# src: gpAssert
+COMPS+=gpLog
+INC_gpLog:=
+INC_gpLog+=-I$(OPENTHREADQORVOGLUE_QPG7015M_FTD_PATH)/code/Components/Qorvo/OS/gpLog/inc
+INC+=$(INC_gpLog)
+
+
+#Depends on:
+# src: gphal, gpAssert, gpPd, gpPad, gpRxArbiter, gpPoolMem
+# inc: gpStat, gpEncryption
+COMPS+=gpMacCore
+INC_gpMacCore:=
+INC_gpMacCore+=-I$(OPENTHREADQORVOGLUE_QPG7015M_FTD_PATH)/code/Components/Qorvo/802_15_4/gpMacCore/inc
+INC_gpMacCore+=-I$(OPENTHREADQORVOGLUE_QPG7015M_FTD_PATH)/code/Components/Qorvo/802_15_4/gpMacCore/src
+INC+=$(INC_gpMacCore)
+
+
+#Depends on:
+# src: gpMacCore, gpAssert, gpPd, gpSched
+# inc: gpStat
+COMPS+=gpMacDispatcher
+INC_gpMacDispatcher:=
+INC_gpMacDispatcher+=-I$(OPENTHREADQORVOGLUE_QPG7015M_FTD_PATH)/code/Components/Qorvo/802_15_4/gpMacDispatcher/inc
+INC_gpMacDispatcher+=-I$(OPENTHREADQORVOGLUE_QPG7015M_FTD_PATH)/code/Components/Qorvo/802_15_4/gpMacDispatcher/src
+INC_gpMacDispatcher+=-I$(OPENTHREADQORVOGLUE_QPG7015M_FTD_PATH)/code/Components/Qorvo/802_15_4/gpMacDispatcher/inc/gen
+INC+=$(INC_gpMacDispatcher)
+
+
+#Depends on:
+# src: gpLog, gpAssert, gphal
+COMPS+=gpPad
+INC_gpPad:=
+INC_gpPad+=-I$(OPENTHREADQORVOGLUE_QPG7015M_FTD_PATH)/code/Components/Qorvo/HAL_RF/gpPad/inc
+INC+=$(INC_gpPad)
+
+
+#Depends on:
+# src: gpLog, gpAssert
+# inc: gpSched, gphal
+COMPS+=gpPd
+INC_gpPd:=
+INC_gpPd+=-I$(OPENTHREADQORVOGLUE_QPG7015M_FTD_PATH)/code/Components/Qorvo/HAL_RF/gpPd/inc
+INC+=$(INC_gpPd)
+
+
+#Depends on:
+# src: gpLog, gpAssert, gpWmrk
+# inc: gpPd
+COMPS+=gpPoolMem
+INC_gpPoolMem:=
+INC_gpPoolMem+=-I$(OPENTHREADQORVOGLUE_QPG7015M_FTD_PATH)/code/Components/Qorvo/OS/gpPoolMem/inc
+INC+=$(INC_gpPoolMem)
+
+
+#Depends on:
+# src: gpLog, gpSched, gphal
+COMPS+=gpRandom
+INC_gpRandom:=
+INC_gpRandom+=-I$(OPENTHREADQORVOGLUE_QPG7015M_FTD_PATH)/code/Components/Qorvo/BaseUtils/gpRandom/inc
+INC+=$(INC_gpRandom)
+
+
+#Depends on:
+# src: gpLog
+COMPS+=gpReset
+INC_gpReset:=
+INC_gpReset+=-I$(OPENTHREADQORVOGLUE_QPG7015M_FTD_PATH)/code/Components/Qorvo/OS/gpReset/inc
+INC+=$(INC_gpReset)
+
+
+#Depends on:
+# src: gpAssert, gphal, gpLog
+COMPS+=gpRxArbiter
+INC_gpRxArbiter:=
+INC_gpRxArbiter+=-I$(OPENTHREADQORVOGLUE_QPG7015M_FTD_PATH)/code/Components/Qorvo/802_15_4/gpRxArbiter/inc
+INC+=$(INC_gpRxArbiter)
+
+
+#Depends on:
+# src: gpAssert, gpLog, gpUtils
+COMPS+=gpSched
+INC_gpSched:=
+INC_gpSched+=-I$(OPENTHREADQORVOGLUE_QPG7015M_FTD_PATH)/code/Components/Qorvo/OS/gpSched/inc
+INC_gpSched+=-I$(OPENTHREADQORVOGLUE_QPG7015M_FTD_PATH)/code/Components/Qorvo/OS/gpSched/src
+INC+=$(INC_gpSched)
+
+
+#Depends on:
+# src: gpLog, gpAssert
+COMPS+=gpStat
+INC_gpStat:=
+INC_gpStat+=-I$(OPENTHREADQORVOGLUE_QPG7015M_FTD_PATH)/code/Components/Qorvo/BaseUtils/gpStat/inc
+INC+=$(INC_gpStat)
+
+
+#Depends on:
+# src: gpAssert, gpLog
+COMPS+=gpUtils
+INC_gpUtils:=
+INC_gpUtils+=-I$(OPENTHREADQORVOGLUE_QPG7015M_FTD_PATH)/code/Components/Qorvo/BaseUtils/gpUtils/inc
+INC+=$(INC_gpUtils)
+
+
+#Depends on:
+# src: gpLog, gpAssert
+COMPS+=gpWmrk
+INC_gpWmrk:=
+INC_gpWmrk+=-I$(OPENTHREADQORVOGLUE_QPG7015M_FTD_PATH)/code/Components/Qorvo/BaseUtils/gpWmrk/inc
+INC+=$(INC_gpWmrk)
+
+
+#Depends on:
+# src: gpAssert, gpReset
+# inc: gpStat, gpBsp, gpEncryption
+COMPS+=gphal
+INC_gphal:=
+INC_gphal+=-I$(OPENTHREADQORVOGLUE_QPG7015M_FTD_PATH)/code/Components/Qorvo/HAL_RF/gphal/inc
+INC+=$(INC_gphal)
+
+
+#Depends on:
+# src: gpBsp, gpAssert
+COMPS+=halLinux
+INC_halLinux:=
+INC_halLinux+=-I$(OPENTHREADQORVOGLUE_QPG7015M_FTD_PATH)/code/Components/Qorvo/HAL_PLATFORM/halLinux/inc
+INC_halLinux+=-I$(OPENTHREADQORVOGLUE_QPG7015M_FTD_PATH)/code/Components/Qorvo/HAL_PLATFORM/halLinux/user/inc
+INC+=$(INC_halLinux)
+
+
+#Depends on:
+# src: 
+# inc: gpAssert, gpBaseComps, gpSched, gpPd, gpMacDispatcher, gpRxArbiter, gpRandom
+COMPS+=qvOT
+INC_qvOT:=
+INC_qvOT+=-I$(OPENTHREADQORVOGLUE_QPG7015M_FTD_PATH)/code/Applications/P959_OpenThread/qvOT/inc
+INC_qvOT+=-I$(OPENTHREADQORVOGLUE_QPG7015M_FTD_PATH)/code/Components/ThirdParty/P959_ot-qorvo/openthread/include
+INC_qvOT+=-I$(OPENTHREADQORVOGLUE_QPG7015M_FTD_PATH)/code/Components/ThirdParty/P959_ot-qorvo/openthread/src/core
+INC_qvOT+=-I$(OPENTHREADQORVOGLUE_QPG7015M_FTD_PATH)/code/Components/ThirdParty/P959_ot-qorvo/openthread/examples/platforms
+INC+=$(INC_qvOT)
+
+
