@@ -1,7 +1,7 @@
 # Setup OpenThread Border Router on Qorvo's QPG7015M Gateway development kit
 
 In this guide, step by step instructions are given to setup an OpenThread Border Router, using Qorvo's QPG7015M Gateway Development Kit.
-This enables the user to set up a Matter network and control Matter devices over Wi-Fi/ethernet with the QPG7015M operating as an OpenThread Border Router, using the [Android chip-tool](https://github.com/Qorvo/QMatter/blob/v0.7.0.0/Documents/Guides/commissioning_android_chiptool.md), or the [POSIX CLI chip-tool](https://github.com/Qorvo/QMatter/blob/v0.7.0.0/Documents/Guides/commissioning_posix_cli_chiptool.md).
+This enables the user to set up a Matter network and control Matter devices over Wi-Fi/ethernet with the QPG7015M operating as an OpenThread Border Router, using the [Android chip-tool](https://github.com/Qorvo/QMatter/blob/v0.7.1.0/Documents/Guides/commissioning_android_chiptool.md), or the [POSIX CLI chip-tool](https://github.com/Qorvo/QMatter/blob/v0.7.1.0/Documents/Guides/commissioning_posix_cli_chiptool.md).
 
 Required Hardware:
 - Access point/Router to connect your QPG7015M Gateway development kit to a local area network (LAN).
@@ -64,7 +64,7 @@ GATEWAY STARTED AND READY TO USE!
 
 ```
 
-The OpenThread Border Router launches a Wi-Fi Access Point `BorderRouter-AP` with password `Qorvo_QPG7015M`. The user is now able to access the OpenThread Border Router via its IP address or hostname on a device that's connected to that Wi-Fi Access point. Matter devices can be joined to the network using the [Android chip-tool](https://github.com/Qorvo/QMatter/blob/v0.7.0.0/Documents/Guides/commissioning_android_chiptool.md) or the [POSIX CLI chip-tool](https://github.com/Qorvo/QMatter/blob/v0.7.0.0/Documents/Guides/commissioning_posix_cli_chiptool.md).
+The OpenThread Border Router launches a Wi-Fi Access Point `BorderRouter-AP` with password `Qorvo_QPG7015M`. The user is now able to access the OpenThread Border Router via its IP address or hostname on a device that's connected to that Wi-Fi Access point. Matter devices can be joined to the network using the [Android chip-tool](https://github.com/Qorvo/QMatter/blob/v0.7.1.0/Documents/Guides/commissioning_android_chiptool.md) or the [POSIX CLI chip-tool](https://github.com/Qorvo/QMatter/blob/v0.7.1.0/Documents/Guides/commissioning_posix_cli_chiptool.md).
 
 ## Step 4: Stop the OpenThread Border Router
 
