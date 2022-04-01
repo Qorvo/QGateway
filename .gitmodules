@@ -1,7 +1,9 @@
 [submodule "third_party/openthread"]
+        branch = main
 	path = ThirdParty/openthread
 	url = https://github.com/openthread/openthread.git
 [submodule "third_party/ot-br-posix"]
+        branch = main
 	path = ThirdParty/ot-br-posix
 	url = https://github.com/openthread/ot-br-posix.git
 [submodule "ThirdParty/tool_rpi"]
