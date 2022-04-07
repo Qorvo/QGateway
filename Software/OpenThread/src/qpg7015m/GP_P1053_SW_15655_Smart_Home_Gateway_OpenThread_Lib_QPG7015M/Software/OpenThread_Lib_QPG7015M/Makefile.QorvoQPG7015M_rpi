@@ -9,7 +9,7 @@ OS_USED?=LINUX
 ROOTDIR?=$(BASEDIR)
 WORKDIR=$(BASEDIR)/Work/QorvoQPG7015M_rpi
 ENV_PATH?=$(BASEDIR)
-PYTHON_BIN?=/mnt/c/gpHub/devenv/qbin/virtualenv/bin/python3
+PYTHON_BIN?=/usr/bin/python3
 CURRENT_CONF:=libopenthread_qpg7015m_rpi.py
 EXTRA_CONF:= 
 

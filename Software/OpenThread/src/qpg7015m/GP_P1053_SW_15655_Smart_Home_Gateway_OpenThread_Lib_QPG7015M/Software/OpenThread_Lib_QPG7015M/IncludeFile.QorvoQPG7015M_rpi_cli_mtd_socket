@@ -2,13 +2,13 @@
 #Generated from:
 # $(QORVOQPG7015M_RPI_CLI_MTD_SOCKET_PATH)/code/Applications/P959_OpenThread/apps/lib_qorvo/qpg7015m_rpi_cli_mtd_socket.py
 
-PYTHON_BIN?=/mnt/c/gpHub/devenv/qbin/virtualenv/bin/python3
+PYTHON_BIN?=/usr/bin/python3
 
 CONFIG_HEADER:=$(QORVOQPG7015M_RPI_CLI_MTD_SOCKET_PATH)/code/Work/Applications/QorvoQPG7015M_rpi_cli_mtd_socket/gen/qorvo_config.h
 INTERNALS_HEADER:=$(QORVOQPG7015M_RPI_CLI_MTD_SOCKET_PATH)/code/Work/Applications/QorvoQPG7015M_rpi_cli_mtd_socket/gen/qorvo_internals.h
 PREINCLUDE_HEADER:=$(QORVOQPG7015M_RPI_CLI_MTD_SOCKET_PATH)/code/Work/Applications/QorvoQPG7015M_rpi_cli_mtd_socket/gen/qorvo_config.h
 
-#Compilation flags are defined in /mnt/c/WS_P1053_v1_5_0_0/Work/Applications/QorvoQPG7015M_rpi_cli_mtd_socket/gen/qorvo_config.h
+#Compilation flags are defined in /mnt/c/WS_P1053_v1_5_0_2/Work/Applications/QorvoQPG7015M_rpi_cli_mtd_socket/gen/qorvo_config.h
 FLAGS=
 FLAGS+=-DGP_CONFIG_HEADER
 

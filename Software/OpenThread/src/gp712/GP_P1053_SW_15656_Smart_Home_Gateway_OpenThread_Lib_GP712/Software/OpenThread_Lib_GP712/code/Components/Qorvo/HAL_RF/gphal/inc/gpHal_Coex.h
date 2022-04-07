@@ -24,9 +24,9 @@
  * modified BSD License or the 3-clause BSD License as published by the Free
  * Software Foundation @ https://directory.fsf.org/wiki/License:BSD-3-Clause
  *
- * $Header: //depot/release/Embedded/Components/Qorvo/HAL_RF/v2.10.2.0/comps/gphal/inc/gpHal_Coex.h#1 $
- * $Change: 187624 $
- * $DateTime: 2021/12/20 10:58:50 $
+ * $Header: //depot/release/Embedded/Components/Qorvo/HAL_RF/v2.10.2.3/comps/gphal/inc/gpHal_Coex.h#1 $
+ * $Change: 190959 $
+ * $DateTime: 2022/02/18 16:20:44 $
  */
 
 /** @file "gpHal_Coex.h"

@@ -78,6 +78,5 @@
 #define GP_DIVERSITY_LOG
 #define GP_DIVERSITY_NR_OF_STACKS                          2
 #define GP_SCHED_DEFAULT_GOTOSLEEP_THRES                   1000
-#define GP_SCHED_FREE_CPU_TIME                             5000
 
 #endif //_QORVO_INTERNALS_H_

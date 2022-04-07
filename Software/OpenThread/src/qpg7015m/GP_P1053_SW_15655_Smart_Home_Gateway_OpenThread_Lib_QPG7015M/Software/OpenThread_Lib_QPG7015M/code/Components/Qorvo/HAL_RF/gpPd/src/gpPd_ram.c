@@ -26,9 +26,9 @@
  * modified BSD License or the 3-clause BSD License as published by the Free
  * Software Foundation @ https://directory.fsf.org/wiki/License:BSD-3-Clause
  *
- * $Header: //depot/release/Embedded/Components/Qorvo/HAL_RF/v2.10.2.0/comps/gpPd/src/gpPd_ram.c#1 $
- * $Change: 187624 $
- * $DateTime: 2021/12/20 10:58:50 $
+ * $Header: //depot/release/Embedded/Components/Qorvo/HAL_RF/v2.10.2.3/comps/gpPd/src/gpPd_ram.c#1 $
+ * $Change: 190959 $
+ * $DateTime: 2022/02/18 16:20:44 $
  *
  */
 
@@ -218,6 +218,12 @@ static UInt8 Pd_AllocatePBM(gpPd_Handle_t pdHandle,UInt16 size)
 void* Pd_AllocatePdMemory(gpPd_Handle_t pdHandle, gpPd_BufferType_t type)
 {
     UInt16 mallocsize;
+    if (gpPd_BufferTypeBle == type)
+    {
+        /* allocate struct with buffer size for BLE packets */
+        mallocsize = sizeof(gpPd_Descriptor_t)-GP_PD_BUFFER_SIZE+GP_PD_BUFFER_SIZE_BLE;
+    }
+    else
     {
         mallocsize = sizeof(gpPd_Descriptor_t);
     }

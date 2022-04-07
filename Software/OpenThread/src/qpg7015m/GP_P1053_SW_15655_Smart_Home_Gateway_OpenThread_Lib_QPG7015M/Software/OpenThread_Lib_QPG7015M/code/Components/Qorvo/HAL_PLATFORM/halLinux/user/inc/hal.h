@@ -60,7 +60,7 @@ extern "C" {
  *****************************************************************************/
 
 #if defined(GP_COMP_UNIT_TEST) && !defined(GP_HAL_DIVERSITY_USE_SELECT) && !defined(GP_UNITTEST_DIVERSITY_NO_FASTFORWARD)
-//error : inserted by sunifdef: "#define HAL_FASTFORWARD_FOR_UNIT_TEST" contradicts -U at /mnt/c/WS_P1053_v1_5_0_0/Package/GP_P1053_SW_15655_Smart_Home_Gateway_OpenThread_Lib_QPG7015M/Software/OpenThread_Lib_QPG7015M/code/Components/Qorvo/HAL_PLATFORM/halLinux/user/inc/hal.h(63)
+//error : inserted by sunifdef: "#define HAL_FASTFORWARD_FOR_UNIT_TEST" contradicts -U at /mnt/c/WS_P1053_v1_5_0_2/Package/GP_P1053_SW_15655_Smart_Home_Gateway_OpenThread_Lib_QPG7015M/Software/OpenThread_Lib_QPG7015M/code/Components/Qorvo/HAL_PLATFORM/halLinux/user/inc/hal.h(63)
 #endif //defined(GP_COMP_UNIT_TEST) && !defined(GP_HAL_DIVERSITY_USE_SELECT) && !defined(HAL_DIVERSITY_USE_LIBEV)&& !defined(GP_UNITTEST_DIVERSITY_NO_FASTFORWARD)
 
 /* This implementation uses the time of the os to keep the time */

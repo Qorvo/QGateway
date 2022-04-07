@@ -2,7 +2,7 @@ BUNDLE_NAME=OpenThread_Lib_QPG7015M
 TOOLCHAIN_RPI="${TOOLCHAIN_RPI-/mnt/c/gpHub/TOOL_RPi/vlatest/bin/arm-gcc-4.7.1}"
 
 PACKAGE_ARCHIVES=( \
-"OpenThread_Lib_QPG7015M_187624_v1.5.0.0.tgz" \
+"OpenThread_Lib_QPG7015M_193072_v1.5.0.2.tgz" \
 )
 PACKAGE_ARTIFACTS=( \
 "OpenThread_Lib_QPG7015M/Work/QorvoQPG7015M_rpi_cli_mtd_socket/libQorvoQPG7015M_rpi_cli_mtd_socket.a" \

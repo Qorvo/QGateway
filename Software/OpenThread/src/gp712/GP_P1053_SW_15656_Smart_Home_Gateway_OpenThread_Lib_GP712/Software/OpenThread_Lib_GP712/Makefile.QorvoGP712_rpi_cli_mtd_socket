@@ -9,7 +9,7 @@ OS_USED?=LINUX
 ROOTDIR?=$(BASEDIR)
 WORKDIR=$(BASEDIR)/Work/QorvoGP712_rpi_cli_mtd_socket
 ENV_PATH?=$(BASEDIR)
-PYTHON_BIN?=/mnt/c/gpHub/devenv/qbin/virtualenv/bin/python3
+PYTHON_BIN?=/usr/bin/python3
 CURRENT_CONF:=gp712_rpi_cli_mtd_socket.py
 EXTRA_CONF:= 
 

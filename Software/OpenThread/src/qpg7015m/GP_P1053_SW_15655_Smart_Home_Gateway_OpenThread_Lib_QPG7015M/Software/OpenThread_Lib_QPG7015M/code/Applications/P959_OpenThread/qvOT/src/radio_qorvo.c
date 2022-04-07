@@ -24,9 +24,9 @@
  * INCIDENTAL OR CONSEQUENTIAL DAMAGES,
  * FOR ANY REASON WHATSOEVER.
  *
- * $Header: //depot/release/Embedded/Applications/P959_OpenThread/v1.1.23.0/comps/qvOT/src/radio_qorvo.c#1 $
- * $Change: 187624 $
- * $DateTime: 2021/12/20 10:58:50 $
+ * $Header: //depot/main/Embedded/Applications/P959_OpenThread/v1.1.23.3/comps/qvOT/src/radio_qorvo.c#2 $
+ * $Change: 193072 $
+ * $DateTime: 2022/04/06 17:54:40 $
  *
  */
 
@@ -48,6 +48,14 @@
 #include "gpAssert.h"
 #include "gpSched.h"
 #include "gpPd.h"
+
+/*****************************************************************************
+ *                    Compile Time Verifications
+ *****************************************************************************/
+
+#ifndef GP_SCHED_FREE_CPU_TIME
+GP_COMPILE_TIME_VERIFY(GP_SCHED_DEFAULT_GOTOSLEEP_THRES>0);
+#endif //GP_SCHED_FREE_CPU_TIME
 
 /*****************************************************************************
  *                    Static Function Prototypes
@@ -338,13 +346,7 @@ void qorvoRadioInit(void)
     qorvoRadioPanId = 0xFFFE;
 
     // Set sleep behavior
-#ifdef GP_SCHED_FREE_CPU_TIME
-    /* linux / rpi case */
-    gpSched_SetGotoSleepEnable(false);
-#else
-    /* embedded case */
     gpSched_SetGotoSleepEnable(true);
-#endif //GP_SCHED_FREE_CPU_TIME
 
 }
 
