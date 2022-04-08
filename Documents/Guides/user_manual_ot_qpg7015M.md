@@ -107,7 +107,7 @@ To obtain the Development Kit and associated drivers contact us at <LPW.support@
 First get the latest version of *QGateway* and its submodules
 
 ```shell
-git clone --recurse-submodules -j8 https://github.com/Qorvo/QGateway.git -b v1.5.0.0
+git clone --recurse-submodules -j8 https://github.com/Qorvo/QGateway.git -b v1.5.0.1
 ```
 
 The `--recurse-submodules` option will populate the `ThirdParty` directories.
