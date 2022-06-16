@@ -6,7 +6,7 @@ Currently repository contains only OpenThread on Qorvo example code from [openth
 
 # QPG7015M Development Kit
 
-An introduction to our QPG7015M Development Kit is available in its [Product Brief](Documents/Product Briefs/SW100722_SDP006_PB_QPG7015M_Development_Kit.pdf)
+An introduction to our QPG7015M Development Kit is available in its [Product Brief](Documents/Product%20Briefs/SW100722_SDP006_PB_QPG7015M_Development_Kit.pdf)
 
 # License
 
