@@ -1,0 +1,373 @@
+#Generated from:
+# $(BASEDIR)/code/Applications/P959_OpenThread/apps/lib_qorvo/qpg7015m_rpi_rcp_socket.py
+
+ifndef BASEDIR
+BASEDIR:=$(abspath $(dir $(abspath $(lastword $(MAKEFILE_LIST)))))
+endif
+# Global vars
+OS_USED?=LINUX
+ROOTDIR?=$(BASEDIR)
+WORKDIR=$(BASEDIR)/Work/QorvoQPG7015M_rpi_rcp_socket
+ENV_PATH?=$(BASEDIR)
+PYTHON_BIN?=/usr/bin/python3
+CURRENT_CONF:=qpg7015m_rpi_rcp_socket.py
+EXTRA_CONF:=
+
+CONFIG_HEADER:=$(BASEDIR)/code/Work/Applications/P959_OpenThread/QorvoQPG7015M_rpi_rcp_socket/gen/qorvo_config.h
+INTERNALS_HEADER:=$(BASEDIR)/code/Work/Applications/P959_OpenThread/QorvoQPG7015M_rpi_rcp_socket/gen/qorvo_internals.h
+PREINCLUDE_HEADER:=$(BASEDIR)/code/Work/Applications/P959_OpenThread/QorvoQPG7015M_rpi_rcp_socket/gen/qorvo_config.h
+
+PREBUILD_SCRIPT:=
+
+POSTBUILD_SCRIPT:=
+
+FLAGS=
+
+# Main target file
+APPLIB:=$(BASEDIR)/Work/QorvoQPG7015M_rpi_rcp_socket/libQorvoQPG7015M_rpi_rcp_socket.a
+
+
+# Compiler specifics
+COMPILER:=rpi_bcm2708
+COMPILER_VERSION:=
+TOOLCHAIN?=/mnt/c/gpHub/TOOL_RPi/vlatest/bin/arm-linux-gnueabihf
+CROSS_COMPILE?=arm-linux-gnueabihf-
+SYSTEMROOT?=/mnt/c/gpHub/TOOL_RPi/vlatest/bin/arm-linux-gnueabihf/arm-linux-gnueabihf/sysroot
+PROGRAMMER?=linux
+PROGRAM_EXT:=a
+LIB_EXT:=a
+
+SRC=
+SRC_NOWARNING=
+ASRC=
+INC=
+AINC=
+LIB=
+
+# Application defines
+APPNAME:=QorvoQPG7015M_rpi_rcp_socket
+SRC_APP:=
+SRC_APP+=$(BASEDIR)/code/Applications/P959_OpenThread/apps/OpenThreadCliSocket/src/main.c
+SRC+=$(SRC_APP)
+INC_APP:=
+INC_APP+=-I$(BASEDIR)/code/Components/Qorvo/HAL_PLATFORM/inc
+INC_APP+=-I$(BASEDIR)/code/Components/Qorvo/HAL_PLATFORM/inc/compiler/RPi_BCM2708
+INC_APP+=-I$(BASEDIR)/code/Work/Applications/P959_OpenThread/QorvoQPG7015M_rpi_rcp_socket/gen
+INC+=$(INC_APP)
+AINC_APP:=
+AINC_APP+=-I$(BASEDIR)/code/Work/Applications/P959_OpenThread/QorvoQPG7015M_rpi_rcp_socket/gen
+AINC+=$(AINC_APP)
+
+#Compilation flags are defined in $(BASEDIR)/code/Work/Applications/P959_OpenThread/QorvoQPG7015M_rpi_rcp_socket/gen/qorvo_config.h
+FLAGS+=-DGP_CONFIG_HEADER
+APPFIRMWARE:=
+
+COMPS:=
+
+#Component sources
+#Depends on:
+# src: gpLog
+COMPS+=gpAssert
+SRC_gpAssert:=
+SRC_gpAssert+=$(BASEDIR)/code/Components/Qorvo/OS/gpAssert/src/gen/gpAssert_marshalling.c
+SRC_gpAssert+=$(BASEDIR)/code/Components/Qorvo/OS/gpAssert/src/gpAssert.c
+SRC+=$(SRC_gpAssert)
+INC_gpAssert:=
+INC_gpAssert+=-I$(BASEDIR)/code/Components/Qorvo/OS/gpAssert/inc
+INC_gpAssert+=-I$(BASEDIR)/code/Components/Qorvo/OS/gpAssert/inc/gen
+INC+=$(INC_gpAssert)
+SRC_NOWARNING+=$(SRC_gpAssert)
+
+#Depends on:
+# src: 
+COMPS+=gpBaseComps
+SRC_gpBaseComps:=
+SRC_gpBaseComps+=$(BASEDIR)/code/Components/Qorvo/OS/gpBaseComps/src/gpBaseComps_StackInit.c
+SRC+=$(SRC_gpBaseComps)
+INC_gpBaseComps:=
+INC_gpBaseComps+=-I$(BASEDIR)/code/Components/Qorvo/OS/gpBaseComps/inc
+INC+=$(INC_gpBaseComps)
+SRC_NOWARNING+=$(SRC_gpBaseComps)
+
+#Depends on:
+# src: 
+COMPS+=gpBsp
+SRC_gpBsp:=
+SRC_gpBsp+=$(BASEDIR)/code/Components/Qorvo/BSP/gpBsp/src/gpBsp.c
+SRC+=$(SRC_gpBsp)
+INC_gpBsp:=
+INC_gpBsp+=-I$(BASEDIR)/code/Components/Qorvo/BSP/gpBsp/inc
+INC_gpBsp+=-I$(BASEDIR)/code/Components/Qorvo/BSP/gpBsp/inc/BLE
+INC_gpBsp+=-I$(BASEDIR)/code/Components/Qorvo/BSP/gpBsp/inc/FTS
+INC_gpBsp+=-I$(BASEDIR)/code/Components/Qorvo/BSP/gpBsp/inc/FoundationAndSilicon
+INC_gpBsp+=-I$(BASEDIR)/code/Components/Qorvo/BSP/gpBsp/inc/Gateway
+INC_gpBsp+=-I$(BASEDIR)/code/Components/Qorvo/BSP/gpBsp/inc/PTC
+INC_gpBsp+=-I$(BASEDIR)/code/Components/Qorvo/BSP/gpBsp/inc/PeripheralExamples
+INC_gpBsp+=-I$(BASEDIR)/code/Components/Qorvo/BSP/gpBsp/inc/RemoteControl
+INC_gpBsp+=-I$(BASEDIR)/code/Components/Qorvo/BSP/gpBsp/inc/SmartHomeAndLighting
+INC+=$(INC_gpBsp)
+SRC_NOWARNING+=$(SRC_gpBsp)
+
+#Depends on:
+# src: gpAssert, gpLog, gpUtils
+COMPS+=gpCom
+SRC_gpCom:=
+SRC_gpCom+=$(BASEDIR)/code/Components/Qorvo/BaseUtils/gpCom/src/gen/ComIoctlInterface_marshalling_client.c
+SRC_gpCom+=$(BASEDIR)/code/Components/Qorvo/BaseUtils/gpCom/src/gen/ComIoctlInterface_marshalling_server.c
+SRC_gpCom+=$(BASEDIR)/code/Components/Qorvo/BaseUtils/gpCom/src/gpCom.c
+SRC_gpCom+=$(BASEDIR)/code/Components/Qorvo/BaseUtils/gpCom/src/gpCom_IoctlUser.c
+SRC_gpCom+=$(BASEDIR)/code/Components/Qorvo/BaseUtils/gpCom/src/gpCom_Rx.c
+SRC+=$(SRC_gpCom)
+INC_gpCom:=
+INC_gpCom+=-I$(BASEDIR)/code/Components/Qorvo/BaseUtils/gpCom/inc
+INC_gpCom+=-I$(BASEDIR)/code/Components/Qorvo/BaseUtils/gpCom/inc/gen
+INC_gpCom+=-I$(BASEDIR)/code/Components/Qorvo/BaseUtils/gpCom/src/gen
+INC+=$(INC_gpCom)
+SRC_NOWARNING+=$(SRC_gpCom)
+
+#Depends on:
+# src: gpPd, gphal
+COMPS+=gpEncryption
+SRC_gpEncryption:=
+SRC_gpEncryption+=$(BASEDIR)/code/Components/Qorvo/BaseUtils/gpEncryption/src/gen/gpEncryption_marshalling.c
+SRC+=$(SRC_gpEncryption)
+INC_gpEncryption:=
+INC_gpEncryption+=-I$(BASEDIR)/code/Components/Qorvo/BaseUtils/gpEncryption/inc
+INC_gpEncryption+=-I$(BASEDIR)/code/Components/Qorvo/BaseUtils/gpEncryption/inc/gen
+INC+=$(INC_gpEncryption)
+SRC_NOWARNING+=$(SRC_gpEncryption)
+
+#Depends on:
+# src: gpAssert
+COMPS+=gpLog
+SRC_gpLog:=
+SRC_gpLog+=$(BASEDIR)/code/Components/Qorvo/OS/gpLog/src/gpLog_printf.c
+SRC+=$(SRC_gpLog)
+INC_gpLog:=
+INC_gpLog+=-I$(BASEDIR)/code/Components/Qorvo/OS/gpLog/inc
+INC_gpLog+=-I$(BASEDIR)/code/Components/Qorvo/OS/gpLog/inc/gen
+INC+=$(INC_gpLog)
+SRC_NOWARNING+=$(SRC_gpLog)
+
+#Depends on:
+# src: gphal, gpAssert, gpPd, gpPad, gpRxArbiter, gpPoolMem, gpEncryption
+# inc: gpStat
+COMPS+=gpMacCore
+SRC_gpMacCore:=
+SRC_gpMacCore+=$(BASEDIR)/code/Components/Qorvo/802_15_4/gpMacCore/src/gen/gpMacCore_marshalling.c
+SRC+=$(SRC_gpMacCore)
+INC_gpMacCore:=
+INC_gpMacCore+=-I$(BASEDIR)/code/Components/Qorvo/802_15_4/gpMacCore/inc
+INC_gpMacCore+=-I$(BASEDIR)/code/Components/Qorvo/802_15_4/gpMacCore/inc/gen
+INC_gpMacCore+=-I$(BASEDIR)/code/Components/Qorvo/802_15_4/gpMacCore/src
+INC+=$(INC_gpMacCore)
+SRC_NOWARNING_EXCLUDES_gpMacCore:=
+SRC_NOWARNING+=$(filter-out $(SRC_NOWARNING_EXCLUDES_gpMacCore), $(SRC_gpMacCore))
+
+#Depends on:
+# src: 
+# inc: gpStat, gpMacCore, gpAssert, gpPd, gpSched
+COMPS+=gpMacDispatcher
+SRC_gpMacDispatcher:=
+SRC_gpMacDispatcher+=$(BASEDIR)/code/Components/Qorvo/802_15_4/gpMacDispatcher/src/gen/gpMacDispatcher_marshalling.c
+SRC_gpMacDispatcher+=$(BASEDIR)/code/Components/Qorvo/802_15_4/gpMacDispatcher/src/gen/gpMacDispatcher_marshalling_client.c
+SRC_gpMacDispatcher+=$(BASEDIR)/code/Components/Qorvo/802_15_4/gpMacDispatcher/src/gen/gpMacDispatcher_wrapper_client.c
+SRC_gpMacDispatcher+=$(BASEDIR)/code/Components/Qorvo/802_15_4/gpMacDispatcher/src/gpMacDispatcher_stackMapping.c
+SRC+=$(SRC_gpMacDispatcher)
+INC_gpMacDispatcher:=
+INC_gpMacDispatcher+=-I$(BASEDIR)/code/Components/Qorvo/802_15_4/gpMacDispatcher/inc
+INC_gpMacDispatcher+=-I$(BASEDIR)/code/Components/Qorvo/802_15_4/gpMacDispatcher/inc/gen
+INC_gpMacDispatcher+=-I$(BASEDIR)/code/Components/Qorvo/802_15_4/gpMacDispatcher/inc/gen
+INC_gpMacDispatcher+=-I$(BASEDIR)/code/Components/Qorvo/802_15_4/gpMacDispatcher/src
+INC+=$(INC_gpMacDispatcher)
+
+#Depends on:
+# src: gpLog, gpAssert, gphal
+COMPS+=gpPad
+INC_gpPad:=
+INC_gpPad+=-I$(BASEDIR)/code/Components/Qorvo/HAL_RF/gpPad/inc
+INC+=$(INC_gpPad)
+
+#Depends on:
+# src: gpLog, gpAssert, gpPoolMem
+# inc: gpSched, gphal
+COMPS+=gpPd
+SRC_gpPd:=
+SRC_gpPd+=$(BASEDIR)/code/Components/Qorvo/HAL_RF/gpPd/src/gen/gpPd_marshalling.c
+SRC_gpPd+=$(BASEDIR)/code/Components/Qorvo/HAL_RF/gpPd/src/gpPd.c
+SRC_gpPd+=$(BASEDIR)/code/Components/Qorvo/HAL_RF/gpPd/src/gpPd_server_pdhandling.c
+SRC+=$(SRC_gpPd)
+INC_gpPd:=
+INC_gpPd+=-I$(BASEDIR)/code/Components/Qorvo/HAL_RF/gpPd/inc
+INC_gpPd+=-I$(BASEDIR)/code/Components/Qorvo/HAL_RF/gpPd/inc/gen
+INC+=$(INC_gpPd)
+
+#Depends on:
+# src: gpLog, gpAssert, gpWmrk
+# inc: gpPd
+COMPS+=gpPoolMem
+SRC_gpPoolMem:=
+SRC_gpPoolMem+=$(BASEDIR)/code/Components/Qorvo/OS/gpPoolMem/src/gpPoolMem.c
+SRC_gpPoolMem+=$(BASEDIR)/code/Components/Qorvo/OS/gpPoolMem/src/gpPoolMem_data.c
+SRC_gpPoolMem+=$(BASEDIR)/code/Components/Qorvo/OS/gpPoolMem/src/gpPoolMem_impl.c
+SRC+=$(SRC_gpPoolMem)
+INC_gpPoolMem:=
+INC_gpPoolMem+=-I$(BASEDIR)/code/Components/Qorvo/OS/gpPoolMem/inc
+INC+=$(INC_gpPoolMem)
+SRC_NOWARNING+=$(SRC_gpPoolMem)
+
+#Depends on:
+# src: 
+# inc: gpLog, gpSched
+COMPS+=gpRandom
+SRC_gpRandom:=
+SRC_gpRandom+=$(BASEDIR)/code/Components/Qorvo/BaseUtils/gpRandom/src/gen/gpRandom_marshalling.c
+SRC_gpRandom+=$(BASEDIR)/code/Components/Qorvo/BaseUtils/gpRandom/src/gen/gpRandom_marshalling_client.c
+SRC_gpRandom+=$(BASEDIR)/code/Components/Qorvo/BaseUtils/gpRandom/src/gen/gpRandom_wrapper_client.c
+SRC+=$(SRC_gpRandom)
+INC_gpRandom:=
+INC_gpRandom+=-I$(BASEDIR)/code/Components/Qorvo/BaseUtils/gpRandom/inc
+INC_gpRandom+=-I$(BASEDIR)/code/Components/Qorvo/BaseUtils/gpRandom/inc/gen
+INC+=$(INC_gpRandom)
+
+#Depends on:
+# src: gpLog
+COMPS+=gpReset
+INC_gpReset:=
+INC_gpReset+=-I$(BASEDIR)/code/Components/Qorvo/OS/gpReset/inc
+INC+=$(INC_gpReset)
+
+#Depends on:
+# src: 
+# inc: gpAssert, gphal, gpLog
+COMPS+=gpRxArbiter
+SRC_gpRxArbiter:=
+SRC_gpRxArbiter+=$(BASEDIR)/code/Components/Qorvo/802_15_4/gpRxArbiter/src/gen/gpRxArbiter_marshalling.c
+SRC_gpRxArbiter+=$(BASEDIR)/code/Components/Qorvo/802_15_4/gpRxArbiter/src/gen/gpRxArbiter_marshalling_client.c
+SRC_gpRxArbiter+=$(BASEDIR)/code/Components/Qorvo/802_15_4/gpRxArbiter/src/gen/gpRxArbiter_wrapper_client.c
+SRC+=$(SRC_gpRxArbiter)
+INC_gpRxArbiter:=
+INC_gpRxArbiter+=-I$(BASEDIR)/code/Components/Qorvo/802_15_4/gpRxArbiter/inc
+INC_gpRxArbiter+=-I$(BASEDIR)/code/Components/Qorvo/802_15_4/gpRxArbiter/inc/gen
+INC+=$(INC_gpRxArbiter)
+SRC_NOWARNING+=$(SRC_gpRxArbiter)
+
+#Depends on:
+# src: gpAssert, gpLog, gpUtils
+COMPS+=gpSched
+SRC_gpSched:=
+SRC_gpSched+=$(BASEDIR)/code/Components/Qorvo/OS/gpSched/src/gpSched.c
+SRC_gpSched+=$(BASEDIR)/code/Components/Qorvo/OS/gpSched/src/gpSched_data.c
+SRC_gpSched+=$(BASEDIR)/code/Components/Qorvo/OS/gpSched/src/gpSched_rom.c
+SRC_gpSched+=$(BASEDIR)/code/Components/Qorvo/OS/gpSched/src/integration/linux/gpSched_il.c
+SRC+=$(SRC_gpSched)
+INC_gpSched:=
+INC_gpSched+=-I$(BASEDIR)/code/Components/Qorvo/OS/gpSched/inc
+INC_gpSched+=-I$(BASEDIR)/code/Components/Qorvo/OS/gpSched/src
+INC+=$(INC_gpSched)
+SRC_NOWARNING+=$(SRC_gpSched)
+
+#Depends on:
+# src: gpLog, gpAssert
+COMPS+=gpStat
+SRC_gpStat:=
+SRC_gpStat+=$(BASEDIR)/code/Components/Qorvo/BaseUtils/gpStat/src/gpStat.c
+SRC+=$(SRC_gpStat)
+INC_gpStat:=
+INC_gpStat+=-I$(BASEDIR)/code/Components/Qorvo/BaseUtils/gpStat/inc
+INC+=$(INC_gpStat)
+SRC_NOWARNING+=$(SRC_gpStat)
+
+#Depends on:
+# src: gpAssert, gpLog
+COMPS+=gpUtils
+SRC_gpUtils:=
+SRC_gpUtils+=$(BASEDIR)/code/Components/Qorvo/BaseUtils/gpUtils/src/gpUtils_LL.c
+SRC_gpUtils+=$(BASEDIR)/code/Components/Qorvo/BaseUtils/gpUtils/src/gpUtils_LLext.c
+SRC_gpUtils+=$(BASEDIR)/code/Components/Qorvo/BaseUtils/gpUtils/src/gpUtils_base64.c
+SRC_gpUtils+=$(BASEDIR)/code/Components/Qorvo/BaseUtils/gpUtils/src/gpUtils_crc.c
+SRC_gpUtils+=$(BASEDIR)/code/Components/Qorvo/BaseUtils/gpUtils/src/gpUtils_crc32.c
+SRC+=$(SRC_gpUtils)
+INC_gpUtils:=
+INC_gpUtils+=-I$(BASEDIR)/code/Components/Qorvo/BaseUtils/gpUtils/inc
+INC+=$(INC_gpUtils)
+SRC_NOWARNING+=$(SRC_gpUtils)
+
+#Depends on:
+# src: 
+COMPS+=gpVersion
+SRC_gpVersion:=
+SRC_gpVersion+=$(BASEDIR)/code/Components/Qorvo/OS/gpVersion/src/gen/gpVersion_marshalling.c
+SRC_gpVersion+=$(BASEDIR)/code/Components/Qorvo/OS/gpVersion/src/gen/gpVersion_marshalling_client.c
+SRC_gpVersion+=$(BASEDIR)/code/Components/Qorvo/OS/gpVersion/src/gen/gpVersion_wrapper_client.c
+SRC_gpVersion+=$(BASEDIR)/code/Components/Qorvo/OS/gpVersion/src/gpVersion_clientAdministration.c
+SRC_gpVersion+=$(BASEDIR)/code/Components/Qorvo/OS/gpVersion/src/gpVersion_moduleAdministration.c
+SRC_gpVersion+=$(BASEDIR)/code/Components/Qorvo/OS/gpVersion/src/gpVersion_versionInfo.c
+SRC+=$(SRC_gpVersion)
+INC_gpVersion:=
+INC_gpVersion+=-I$(BASEDIR)/code/Components/Qorvo/OS/gpVersion/inc
+INC_gpVersion+=-I$(BASEDIR)/code/Components/Qorvo/OS/gpVersion/inc/gen
+INC_gpVersion+=-I$(BASEDIR)/code/Components/Qorvo/OS/gpVersion/src
+INC+=$(INC_gpVersion)
+
+#Depends on:
+# src: gpLog, gpAssert
+COMPS+=gpWmrk
+INC_gpWmrk:=
+INC_gpWmrk+=-I$(BASEDIR)/code/Components/Qorvo/BaseUtils/gpWmrk/inc
+INC+=$(INC_gpWmrk)
+
+#Depends on:
+# src: gpAssert, gpReset, gpSched
+# inc: gpStat, gpBsp, gpEncryption
+COMPS+=gphal
+SRC_gphal:=
+SRC_gphal+=$(BASEDIR)/code/Components/Qorvo/HAL_RF/gphal/src/gen/gpHal_Coex_marshalling.c
+SRC+=$(SRC_gphal)
+INC_gphal:=
+INC_gphal+=-I$(BASEDIR)/code/Components/Qorvo/HAL_RF/gphal/inc
+INC_gphal+=-I$(BASEDIR)/code/Components/Qorvo/HAL_RF/gphal/inc/gen
+INC+=$(INC_gphal)
+
+#Depends on:
+# src: gpBsp, gpAssert
+COMPS+=halLinux
+SRC_halLinux:=
+SRC_halLinux+=$(BASEDIR)/code/Components/Qorvo/HAL_PLATFORM/halLinux/user/src/hal_Heap.c
+SRC_halLinux+=$(BASEDIR)/code/Components/Qorvo/HAL_PLATFORM/halLinux/user/src/hal_Sched.c
+SRC_halLinux+=$(BASEDIR)/code/Components/Qorvo/HAL_PLATFORM/halLinux/user/src/hal_Timer.c
+SRC_halLinux+=$(BASEDIR)/code/Components/Qorvo/HAL_PLATFORM/halLinux/user/src/hal_UART.c
+SRC_halLinux+=$(BASEDIR)/code/Components/Qorvo/HAL_PLATFORM/halLinux/user/src/hal_backtrace.c
+SRC_halLinux+=$(BASEDIR)/code/Components/Qorvo/HAL_PLATFORM/halLinux/user/src/hal_noradio.c
+SRC+=$(SRC_halLinux)
+INC_halLinux:=
+INC_halLinux+=-I$(BASEDIR)/code/Components/Qorvo/HAL_PLATFORM/halLinux/inc
+INC_halLinux+=-I$(BASEDIR)/code/Components/Qorvo/HAL_PLATFORM/halLinux/user/inc
+INC+=$(INC_halLinux)
+LIB_halLinux:=
+LIB_halLinux+=pthread
+LIB_halLinux+=rt
+LIB+=$(LIB_halLinux)
+
+#Depends on:
+# src: 
+# inc: gpAssert, gpBaseComps, gpSched, gpPd, gpMacDispatcher, gpRxArbiter, gpRandom, gpCom
+COMPS+=qvOT
+SRC_qvOT:=
+SRC_qvOT+=$(BASEDIR)/code/Applications/P959_OpenThread/qvOT/src/alarm_qorvo.c
+SRC_qvOT+=$(BASEDIR)/code/Applications/P959_OpenThread/qvOT/src/platform_qorvo.c
+SRC_qvOT+=$(BASEDIR)/code/Applications/P959_OpenThread/qvOT/src/radio_qorvo.c
+SRC_qvOT+=$(BASEDIR)/code/Applications/P959_OpenThread/qvOT/src/uart_rpi_qorvo.c
+SRC+=$(SRC_qvOT)
+INC_qvOT:=
+INC_qvOT+=-I$(BASEDIR)/code/Applications/P959_OpenThread/qvOT/inc
+INC_qvOT+=-I$(BASEDIR)/code/Components/ThirdParty/P959_ot-qorvo/openthread/examples/platforms
+INC_qvOT+=-I$(BASEDIR)/code/Components/ThirdParty/P959_ot-qorvo/openthread/include
+INC_qvOT+=-I$(BASEDIR)/code/Components/ThirdParty/P959_ot-qorvo/openthread/src/core
+INC_qvOT+=-I$(BASEDIR)/code/Components/ThirdParty/P959_ot-qorvo/src/qpg7015m
+INC+=$(INC_qvOT)
+SRC_NOWARNING+=$(SRC_qvOT)
+
+
+-include $(BASEDIR)/custom.mk
+include $(ENV_PATH)/make/gpcommon.mk
