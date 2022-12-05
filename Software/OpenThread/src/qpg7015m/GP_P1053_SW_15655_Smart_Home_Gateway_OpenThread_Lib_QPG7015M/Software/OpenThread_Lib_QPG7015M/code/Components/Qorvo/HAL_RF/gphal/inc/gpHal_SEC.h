@@ -29,9 +29,9 @@
  * modified BSD License or the 3-clause BSD License as published by the Free
  * Software Foundation @ https://directory.fsf.org/wiki/License:BSD-3-Clause
  *
- * $Header: //depot/main/Embedded/Components/Qorvo/HAL_RF/v2.10.3.1/comps/gphal/inc/gpHal_SEC.h#1 $
- * $Change: 195340 $
- * $DateTime: 2022/06/17 14:57:48 $
+ * $Header: //depot/release/Embedded/Components/Qorvo/HAL_RF/v2.10.3.2/comps/gphal/inc/gpHal_SEC.h#1 $
+ * $Change: 198093 $
+ * $DateTime: 2022/12/05 12:18:00 $
  *
  */
 
@@ -157,6 +157,25 @@ GP_API gpHal_Result_t gpHal_CCMDecrypt(gpEncryption_CCMOptions_t * pCCMOptions);
 GP_API gpHal_Result_t gpHal_HMAC(UInt8 hashFct, UInt16 keyLength, UInt16 msgLength, UInt8 resultLength, UInt8* pKey, UInt8* pMsg, UInt8* pResult);
 
 
+/**
+ * @brief Configures the encryption key for raw frames (Thread).
+ *
+ * The function will configure the key and key index for the current encryption key.
+ *
+ * @param encryptionKeyId     Key index for the current encryption key.
+ * @param pCurrKey            Pointer to the current encryption key.
+ */
+void gpHal_SetRawModeEncryptionKeys(UInt8 encryptionKeyId, UInt8* pCurrKey);
+/**
+ * @brief configures the fields for the Nonce used in the encryption of the raw frames (Thread)
+ *
+ * The function will set the fields for the Nonce.
+ *
+ * @param frameCounter        Initial value of the Frame counter. It will be autoincremented in consecutive transmissions.
+ * @param pExtendedAddress    Pointer to the extended (local) source address.
+ * @param seclevel            Security Level. Only level 5 is supported currently.
+ */
+void gpHal_SetRawModeNonceFields(UInt32 frameCounter, MACAddress_t* pExtendedAddress , UInt8 seclevel);
 
 
 #ifdef __cplusplus

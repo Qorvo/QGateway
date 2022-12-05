@@ -25,9 +25,9 @@
  * modified BSD License or the 3-clause BSD License as published by the Free
  * Software Foundation @ https://directory.fsf.org/wiki/License:BSD-3-Clause
  *
- * $Header: //depot/main/Embedded/Components/Qorvo/HAL_RF/v2.10.3.1/comps/gphal/inc/gpHal_MAC.h#2 $
- * $Change: 195474 $
- * $DateTime: 2022/06/22 09:57:04 $
+ * $Header: //depot/release/Embedded/Components/Qorvo/HAL_RF/v2.10.3.2/comps/gphal/inc/gpHal_MAC.h#1 $
+ * $Change: 198093 $
+ * $DateTime: 2022/12/05 12:18:00 $
  *
  */
 
@@ -174,6 +174,11 @@ void gpHal_GetMacRxMode(Bool* enableMultiStandard, Bool* enableMultiChannel, Boo
 typedef struct gpHal_DataReqOptions_s{
     gpHal_MacScenario_t             macScenario;
     gpHal_SourceIdentifier_t        srcId;
+    Bool                            rawEncryptionEnable;
+    Bool                            rawKeepFrameCounter;
+    UInt16                          rawAuxOffset;
+    UInt16                          rawDataOffset;
+    UInt16                          rawCslIeOffset;
 }gpHal_DataReqOptions_t;
 //@}
 
@@ -360,10 +365,21 @@ GP_API UInt8 gpHal_GetRxChannel(gpHal_SourceIdentifier_t srcId);
  *  This function returns the last 802.15.4 channel used to transmit on.
  *
  *  @param  PBMentry   The last transmitted PBM
- *  @return channel    The last 802.15.4 the radio transmitted on
+ *  @return channel    The last 802.15.4 channel the radio transmitted on
  *
  */
 GP_API UInt8 gpHal_GetLastUsedChannel(UInt8 PBMentry);
+
+/** @brief This function returns @true if the raw frame encryption was done successfully.
+ *
+ *  This function returns @true if the raw frame encryption was done successfully.
+ *  Supported since k8c (but not on k8d)
+ *
+ *  @param  PBMentry        The last transmitted PBM
+ *  @return encryptionDone  Whether or not raw frame TX enryption was done successfully
+ *
+ */
+GP_API Bool gpHal_GetTxEncryptionDone(UInt8 PBMentry);
 
 /** @brief Configure the default transmit power for each channel
  *

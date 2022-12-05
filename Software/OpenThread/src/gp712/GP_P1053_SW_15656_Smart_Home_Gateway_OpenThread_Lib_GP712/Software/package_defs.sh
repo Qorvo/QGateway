@@ -2,7 +2,7 @@ TOOLCHAIN_RPI="${TOOLCHAIN_RPI-/mnt/c/gpHub/TOOL_RPi/vlatest/bin/arm-linux-gnuea
 BUNDLE_NAME=OpenThread_Lib_GP712
 
 PACKAGE_ARCHIVES=( \
-"OpenThread_Lib_GP712_196357_v1.5.1.0.tgz" \
+"OpenThread_Lib_GP712_198093_v1.5.1.0.tgz" \
 )
 PACKAGE_ARTIFACTS=( \
 "OpenThread_Lib_GP712/Work/QorvoGP712_rpi_cli_mtd_socket/libQorvoGP712_rpi_cli_mtd_socket.a" \

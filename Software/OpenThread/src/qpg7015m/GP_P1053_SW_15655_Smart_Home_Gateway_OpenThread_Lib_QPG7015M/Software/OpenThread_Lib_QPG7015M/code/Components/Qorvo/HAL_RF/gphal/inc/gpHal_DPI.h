@@ -25,9 +25,9 @@
  * modified BSD License or the 3-clause BSD License as published by the Free
  * Software Foundation @ https://directory.fsf.org/wiki/License:BSD-3-Clause
  *
- * $Header: //depot/main/Embedded/Components/Qorvo/HAL_RF/v2.10.3.1/comps/gphal/inc/gpHal_DPI.h#1 $
- * $Change: 195340 $
- * $DateTime: 2022/06/17 14:57:48 $
+ * $Header: //depot/release/Embedded/Components/Qorvo/HAL_RF/v2.10.3.2/comps/gphal/inc/gpHal_DPI.h#1 $
+ * $Change: 198093 $
+ * $DateTime: 2022/12/05 12:18:00 $
  *
  */
 

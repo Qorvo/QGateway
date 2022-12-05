@@ -25,9 +25,9 @@
  * modified BSD License or the 3-clause BSD License as published by the Free
  * Software Foundation @ https://directory.fsf.org/wiki/License:BSD-3-Clause
  *
- * $Header: //depot/main/Embedded/Components/Qorvo/802_15_4/v2.10.3.1/comps/gpMacDispatcher/src/gen/gpMacDispatcher_wrapper_client.c#4 $
- * $Change: 195905 $
- * $DateTime: 2022/07/08 07:46:42 $
+ * $Header: //depot/release/Embedded/Components/Qorvo/802_15_4/v2.10.3.1/comps/gpMacDispatcher/src/gen/gpMacDispatcher_wrapper_client.c#1 $
+ * $Change: 197210 $
+ * $DateTime: 2022/10/13 16:52:00 $
  */
 
 /** @file "gpMacDispatcher_wrapper_client.c"
@@ -3917,7 +3917,65 @@ Bool gpMacDispatcher_GetStackInRawMode(gpMacDispatcher_StackId_t stackId)
     return rawModeEnabled;
 }
 
+void gpMacDispatcher_SetRawModeEncryptionKeys(gpMacCore_KeyIdMode_t encryptionKeyIdMode, gpMacCore_KeyIndex_t encryptionKeyId, UInt8* pCurrKey, gpMacDispatcher_StackId_t stackId)
+{
+    UInt16 _index = 1;
+    UInt8 dataBuf[1 + 1 + 1 + 1 + 16 + 1];
 
+#if !defined(GP_VERSION_DIVERSITY_NO_MODULE_VERSION) && GP_COMPONENT_ID != GP_COMPONENT_ID_VERSION
+    GP_ASSERT_DEV_EXT(MacDispatcher_clientApiVersionSelected);
+#endif
+
+#define commandId                                           dataBuf[0]
+
+    commandId = gpMacDispatcher_SetRawModeEncryptionKeys_CmdId;
+
+    gpMacDispatcher_SetRawModeEncryptionKeys_Input_par2buf(dataBuf
+        , encryptionKeyIdMode
+        , encryptionKeyId
+        , pCurrKey
+        , stackId
+        , &_index);
+
+    GP_ASSERT_SYSTEM(_index <= sizeof(dataBuf));
+    DATA_REQUEST_ACKED(_index, dataBuf, GP_MACDISPATCHER_COMM_ID);
+
+    GP_ASSERT_SYSTEM(gpMarshall_AckStatusSuccess == gpMacDispatcher_ackBuffer[1]);
+    GP_ASSERT_SYSTEM(gpMacDispatcher_SetRawModeEncryptionKeys_CmdId == gpMacDispatcher_ackBuffer[2]);
+
+
+#undef commandId
+}
+
+void gpMacDispatcher_SetRawModeNonceFields(UInt32 frameCounter, MACAddress_t* pExtendedAddress, UInt8 seclevel, gpMacDispatcher_StackId_t stackId)
+{
+    UInt16 _index = 1;
+    UInt8 dataBuf[1 + 4*1 + 1 + 8*1 + 1 + 1];
+
+#if !defined(GP_VERSION_DIVERSITY_NO_MODULE_VERSION) && GP_COMPONENT_ID != GP_COMPONENT_ID_VERSION
+    GP_ASSERT_DEV_EXT(MacDispatcher_clientApiVersionSelected);
+#endif
+
+#define commandId                                           dataBuf[0]
+
+    commandId = gpMacDispatcher_SetRawModeNonceFields_CmdId;
+
+    gpMacDispatcher_SetRawModeNonceFields_Input_par2buf(dataBuf
+        , frameCounter
+        , pExtendedAddress
+        , seclevel
+        , stackId
+        , &_index);
+
+    GP_ASSERT_SYSTEM(_index <= sizeof(dataBuf));
+    DATA_REQUEST_ACKED(_index, dataBuf, GP_MACDISPATCHER_COMM_ID);
+
+    GP_ASSERT_SYSTEM(gpMarshall_AckStatusSuccess == gpMacDispatcher_ackBuffer[1]);
+    GP_ASSERT_SYSTEM(gpMacDispatcher_SetRawModeNonceFields_CmdId == gpMacDispatcher_ackBuffer[2]);
+
+
+#undef commandId
+}
 
 void gpMacDispatcher_EnableEnhancedFramePending(Bool enableEnhancedFramePending, gpMacDispatcher_StackId_t stackId)
 {

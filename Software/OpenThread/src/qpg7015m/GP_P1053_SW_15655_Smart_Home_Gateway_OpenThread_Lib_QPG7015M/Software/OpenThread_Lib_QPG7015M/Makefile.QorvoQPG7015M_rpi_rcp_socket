@@ -9,7 +9,7 @@ OS_USED?=LINUX
 ROOTDIR?=$(BASEDIR)
 WORKDIR=$(BASEDIR)/Work/QorvoQPG7015M_rpi_rcp_socket
 ENV_PATH?=$(BASEDIR)
-PYTHON_BIN?=/usr/bin/python3
+PYTHON_BIN?=/mnt/c/gpHub/devenv/qbin/virtualenv/bin/python3
 CURRENT_CONF:=qpg7015m_rpi_rcp_socket.py
 EXTRA_CONF:=
 
@@ -22,13 +22,18 @@ PREBUILD_SCRIPT:=
 POSTBUILD_SCRIPT:=
 
 FLAGS=
+# Build variables
+SRC_DISABLE_ALIGNMENT_ERROR+=$(BASEDIR)/code/Components/ThirdParty/Silex/cryptosoc/libcryptosoc/src/cryptodma.c
+SRC_DISABLE_ALIGNMENT_ERROR+=$(BASEDIR)/code/Components/ThirdParty/Silex/cryptosoc/libcryptosoc/src/memcmp.c
+SRC_DISABLE_ALIGNMENT_ERROR+=$(BASEDIR)/code/Components/ThirdParty/Silex/cryptosoc/libcryptosoc/src/sx_derive_key_alg.c
+SRC_DISABLE_ALIGNMENT_ERROR+=$(BASEDIR)/code/Components/ThirdParty/Silex/cryptosoc/libcryptosoc/src/sx_rng.c
 
 # Main target file
 APPLIB:=$(BASEDIR)/Work/QorvoQPG7015M_rpi_rcp_socket/libQorvoQPG7015M_rpi_rcp_socket.a
 
 
 # Compiler specifics
-COMPILER:=rpi_bcm2708
+COMPILER?=rpi_bcm2708
 COMPILER_VERSION:=
 TOOLCHAIN?=/mnt/c/gpHub/TOOL_RPi/vlatest/bin/arm-linux-gnueabihf
 CROSS_COMPILE?=arm-linux-gnueabihf-
@@ -318,7 +323,7 @@ INC_gpWmrk+=-I$(BASEDIR)/code/Components/Qorvo/BaseUtils/gpWmrk/inc
 INC+=$(INC_gpWmrk)
 
 #Depends on:
-# src: gpAssert, gpReset, gpSched
+# src: gpAssert, gpReset, silexCryptoSoc, gpSched
 # inc: gpStat, gpBsp, gpEncryption
 COMPS+=gphal
 SRC_gphal:=
@@ -367,6 +372,19 @@ INC_qvOT+=-I$(BASEDIR)/code/Components/ThirdParty/P959_ot-qorvo/openthread/src/c
 INC_qvOT+=-I$(BASEDIR)/code/Components/ThirdParty/P959_ot-qorvo/src/qpg7015m
 INC+=$(INC_qvOT)
 SRC_NOWARNING+=$(SRC_qvOT)
+
+#Depends on:
+# src: gpAssert, gpLog
+COMPS+=silexCryptoSoc
+INC_silexCryptoSoc:=
+INC_silexCryptoSoc+=-I$(BASEDIR)/code/Components/Qorvo/HAL_PLATFORM/silexCryptoSoc/inc
+INC_silexCryptoSoc+=-I$(BASEDIR)/code/Components/ThirdParty/Silex/cryptosoc/libcryptosoc/include
+INC_silexCryptoSoc+=-I$(BASEDIR)/code/Components/ThirdParty/Silex/cryptosoc/libcryptosoc/src
+INC+=$(INC_silexCryptoSoc)
+AINC_silexCryptoSoc:=
+AINC_silexCryptoSoc+=-I$(BASEDIR)/code/Components/ThirdParty/Silex/cryptosoc/libcryptosoc/include
+AINC_silexCryptoSoc+=-I$(BASEDIR)/code/Components/ThirdParty/Silex/cryptosoc/libcryptosoc/src
+AINC+=$(AINC_silexCryptoSoc)
 
 
 -include $(BASEDIR)/custom.mk

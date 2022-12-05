@@ -117,7 +117,7 @@ void otPlatRadioSetPanId(otInstance *aInstance, otPanId aPanId)
 {
     OT_UNUSED_VARIABLE(aInstance);
 
-    qorvoRadioSetPanId((uint16_t) aPanId);
+    qorvoRadioSetPanId((uint16_t)aPanId);
     otCachedSettings.panid = aPanId;
 }
 
@@ -132,7 +132,7 @@ void otPlatRadioSetShortAddress(otInstance *aInstance, otShortAddress aShortAddr
 {
     OT_UNUSED_VARIABLE(aInstance);
 
-    qorvoRadioSetShortAddress((uint16_t) aShortAddress);
+    qorvoRadioSetShortAddress((uint16_t)aShortAddress);
 }
 
 otError otPlatRadioGetTransmitPower(otInstance *aInstance, int8_t *aPower)
@@ -404,7 +404,7 @@ otError otPlatRadioAddSrcMatchShortEntry(otInstance *aInstance, otShortAddress a
 {
     OT_UNUSED_VARIABLE(aInstance);
 
-    return qorvoRadioAddSrcMatchShortEntry((uint16_t) aShortAddress, otCachedSettings.panid);
+    return qorvoRadioAddSrcMatchShortEntry((uint16_t)aShortAddress, otCachedSettings.panid);
 }
 
 otError otPlatRadioAddSrcMatchExtEntry(otInstance *aInstance, const otExtAddress *aExtAddress)
@@ -418,7 +418,7 @@ otError otPlatRadioClearSrcMatchShortEntry(otInstance *aInstance, otShortAddress
 {
     OT_UNUSED_VARIABLE(aInstance);
 
-    return qorvoRadioClearSrcMatchShortEntry((uint16_t) aShortAddress, otCachedSettings.panid);
+    return qorvoRadioClearSrcMatchShortEntry((uint16_t)aShortAddress, otCachedSettings.panid);
 }
 
 otError otPlatRadioClearSrcMatchExtEntry(otInstance *aInstance, const otExtAddress *aExtAddress)
@@ -504,4 +504,3 @@ otError otPlatRadioGetRegion(otInstance *aInstance, uint16_t *aRegionCode)
 
     return OT_ERROR_NOT_IMPLEMENTED;
 }
-

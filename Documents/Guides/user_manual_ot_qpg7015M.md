@@ -7,7 +7,7 @@ The QPG7015M ([specification](https://www.qorvo.com/products/p/QPG7015M)) is an 
 ConcurrentConnect™ technology: allowing instantaneous switching between Bluetooth Low Energy and IEEE 802.15.4 protocols with no observable blind spots.
 
 <div align="center">
-  <img align="center", src="../Images/qpg7015m_dk_casing.png" alt="QPG7015M Development Kit">
+  <img align="center", src="../Images/qpg7015m_dk_casing.png" alt="QPG7015M Gateway">
 </div>
 
 ---
@@ -37,7 +37,7 @@ ConcurrentConnect™ technology: allowing instantaneous switching between Blueto
 
 ### Hardware
 
-The QPG7015M Development Kit contains a Raspberry Pi 4 (RPi), a QPG7015M module and an SD card with the necessary drivers.
+The QPG7015M Gateway contains a Raspberry Pi 4 (RPi), a QPG7015M module and an SD card with the necessary drivers.
 
 ### Software
 
@@ -98,9 +98,9 @@ From top to bottom:
 - Kernel drivers
   - Driver `.ko` files, the necessary deploy instruction and other documentation need to be obtained through <LPW.support@qorvo.com> or through your business contact.
 
-All the parts in _User space_ will be compiled into a single executable `.elf` file. This executable communicates with the RPi kernel drivers provided in the QPG7015M Development Kit.
+All the parts in _User space_ will be compiled into a single executable `.elf` file. This executable communicates with the RPi kernel drivers provided in the QPG7015M Gateway.
 
-To obtain the Development Kit and associated drivers contact us at <LPW.support@qorvo.com> or through your business contact.
+To obtain the QPG7015M Gateway and associated drivers contact us at <LPW.support@qorvo.com> or through your business contact.
 
 ### Getting Qorvo _OpenThread_
 
@@ -231,7 +231,7 @@ Programming the executable, means just copying it to a RPi and making sure it is
     chmod +x qpg7015m-ot-cli-ftd.elf
 ```
 
-To run it, one first has to make sure the kernel drivers are loaded and have a communications channel with the `*.elf`. Instructions for this come with the QPG7015M Development Kit.
+To run it, one first has to make sure the kernel drivers are loaded and have a communications channel with the `*.elf`. Instructions for this come with the QPG7015M Gateway.
 
 ### Interacting with the Thread Network through the CLI
 

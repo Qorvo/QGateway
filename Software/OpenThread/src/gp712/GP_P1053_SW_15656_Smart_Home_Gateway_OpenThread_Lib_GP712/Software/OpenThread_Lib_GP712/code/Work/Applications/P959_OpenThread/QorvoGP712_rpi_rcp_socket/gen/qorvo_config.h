@@ -33,15 +33,15 @@
  * Version info
  */
 
-#define GP_CHANGELIST                                      196357
+#define GP_CHANGELIST                                      198093
 #define GP_VERSIONINFO_APP                                 QorvoGP712_rpi_rcp_socket
 #define GP_VERSIONINFO_BASE_COMPS                          2,10,3,1
 #define GP_VERSIONINFO_BLE_COMPS                           2,10,3,1
-#define GP_VERSIONINFO_DATE                                2022-08-05
-#define GP_VERSIONINFO_GLOBAL_VERSION                      1,2,0,1
+#define GP_VERSIONINFO_DATE                                2022-12-05
+#define GP_VERSIONINFO_GLOBAL_VERSION                      1,2,0,2
 #define GP_VERSIONINFO_HOST                                UNKNOWN
 #define GP_VERSIONINFO_PROJECT                             P959_OpenThread
-#define GP_VERSIONINFO_USER                                mp034867@UNKNOWN
+#define GP_VERSIONINFO_USER                                UNKNOWN@UNKNOWN
 
 
 /*

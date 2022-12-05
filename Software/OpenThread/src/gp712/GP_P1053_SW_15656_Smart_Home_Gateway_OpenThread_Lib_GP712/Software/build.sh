@@ -1,6 +1,8 @@
 #!/bin/bash
 set -x
 # Script settings
+
+# shellcheck disable=SC1091
 source package_defs.sh
 
 if grep -qE "(Microsoft|WSL)" /proc/sys/kernel/osrelease ; then
@@ -33,7 +35,7 @@ preconditions()
     test -f Module.symvers && rm Module.symvers
     for DEPENDENCY_LINK in "${BUILD_DEPENDENCIES[@]}"; do
         # LKM build Workaround: with 5.10.17, MODPOST fails unless Kbuild or Makefile
-        # exist and point to the Makefile.xxx 
+        # exist and point to the Makefile.xxx
         DEPENDENCY_KEY="${DEPENDENCY_LINK%%|*}"
         if [ "${DEPENDENCY_KEY}" != "$1" ]
         then
@@ -50,7 +52,7 @@ preconditions()
         if [ -f Module.symvers ]
         then
             mv Module.symvers Module.symvers.$COUNTER
-            let COUNTER++
+            ((COUNTER++))
         fi
     done
 #    cat Module.symvers.* |sort -k 1 |tee Module.symvers
@@ -72,7 +74,7 @@ make_unpack()
         else
             tar -xzvf "${ARCHIVE_NAME}" || failed "Unable to extract tar"
         fi
-        
+
         cd - || failed
     done
     popd || failed
@@ -91,7 +93,7 @@ make_target()
             fi
         done
         # LKM build Workaround: with 5.10.17, MODPOST fails unless Kbuild or Makefile
-        # exist and point to the Makefile.xxx 
+        # exist and point to the Makefile.xxx
         preconditions "${TARGET%% *}"
         # word splitting (SC2086 is required)
         test -f Kbuild && rm Kbuild
@@ -129,4 +131,3 @@ make_clean()
 print_info && make_unpack
 [[ $1 == "clean" ]] && make_clean
 make_target && check_artifacts
-

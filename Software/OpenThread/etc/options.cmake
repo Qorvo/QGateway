@@ -33,7 +33,7 @@ if (OT_MBEDTLS_DEBUG)
 endif()
 
 # Uart transport option
-# option(OT_QORVO_SOCKET "enable socket interface for uart transport on RPi based platforms" ON)
+option(OT_QORVO_SOCKET "enable socket interface for uart transport on RPi based platforms" OFF)
 
 
 # WARN: the below options are only used for target control in internal repos, they overrule

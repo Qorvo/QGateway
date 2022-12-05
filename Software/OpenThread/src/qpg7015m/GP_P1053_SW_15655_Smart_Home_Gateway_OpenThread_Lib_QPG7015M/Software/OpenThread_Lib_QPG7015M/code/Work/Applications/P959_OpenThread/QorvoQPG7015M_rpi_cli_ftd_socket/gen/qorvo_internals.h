@@ -65,6 +65,7 @@
 #define GP_COMPONENT_ID_RESET                              33
 #define GP_COMPONENT_ID_RXARBITER                          2
 #define GP_COMPONENT_ID_SCHED                              9
+#define GP_COMPONENT_ID_SILEXCRYPTOSOC                     54
 #define GP_COMPONENT_ID_STAT                               22
 #define GP_COMPONENT_ID_UTILS                              4
 #define GP_COMPONENT_ID_VERSION                            129
@@ -78,7 +79,7 @@
 #define GP_DIVERSITY_NR_OF_STACKS                          2
 #define GP_SCHED_DEFAULT_GOTOSLEEP_THRES                   1000
 #define OPENTHREAD_COMMISSIONER
-#define QORVOOPENTHREAD_MAX_CHILDREN                       10
+#define QORVOOPENTHREAD_MAX_CHILDREN                       64
 #define QVOT_THREAD_1_2
 
 #endif //_QORVO_INTERNALS_H_

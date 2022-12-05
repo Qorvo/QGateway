@@ -1,8 +1,8 @@
-TOOLCHAIN_RPI="${TOOLCHAIN_RPI-/mnt/c/gpHub/TOOL_RPi/vlatest/bin/arm-linux-gnueabihf}"
 BUNDLE_NAME=OpenThread_Lib_QPG7015M
+TOOLCHAIN_RPI="${TOOLCHAIN_RPI-/mnt/c/gpHub/TOOL_RPi/vlatest/bin/arm-linux-gnueabihf}"
 
 PACKAGE_ARCHIVES=( \
-"OpenThread_Lib_QPG7015M_196357_v1.5.1.0.tgz" \
+"OpenThread_Lib_QPG7015M_198093_v1.5.1.0.tgz" \
 )
 PACKAGE_ARTIFACTS=( \
 "OpenThread_Lib_QPG7015M/Work/QorvoQPG7015M_rpi_cli_mtd_socket/libQorvoQPG7015M_rpi_cli_mtd_socket.a" \

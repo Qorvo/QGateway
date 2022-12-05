@@ -25,9 +25,9 @@
  * modified BSD License or the 3-clause BSD License as published by the Free
  * Software Foundation @ https://directory.fsf.org/wiki/License:BSD-3-Clause
  *
- * $Header: //depot/main/Embedded/Components/Qorvo/802_15_4/v2.10.3.1/comps/gpMacDispatcher/inc/gen/gpMacDispatcher_marshalling.h#4 $
- * $Change: 195905 $
- * $DateTime: 2022/07/08 07:46:42 $
+ * $Header: //depot/release/Embedded/Components/Qorvo/802_15_4/v2.10.3.1/comps/gpMacDispatcher/inc/gen/gpMacDispatcher_marshalling.h#1 $
+ * $Change: 197210 $
+ * $DateTime: 2022/10/13 16:52:00 $
  */
 
 #ifndef _GPMACDISPATCHER_MARSHALLING_H_
@@ -1504,6 +1504,30 @@ typedef struct {
 } gpMacDispatcher_GetStackInRawMode_Output_marshall_struct_t;
 
 
+typedef struct {
+    gpMacCore_KeyIdMode_t encryptionKeyIdMode;
+    gpMacCore_KeyIndex_t encryptionKeyId;
+    UInt8* pCurrKey;
+    gpMacDispatcher_StackId_t stackId;
+} gpMacDispatcher_SetRawModeEncryptionKeys_Input_struct_t;
+
+typedef struct {
+    gpMacDispatcher_SetRawModeEncryptionKeys_Input_struct_t data;
+    UInt8 pCurrKey[16];
+} gpMacDispatcher_SetRawModeEncryptionKeys_Input_marshall_struct_t;
+
+
+typedef struct {
+    UInt32 frameCounter;
+    MACAddress_t* pExtendedAddress;
+    UInt8 seclevel;
+    gpMacDispatcher_StackId_t stackId;
+} gpMacDispatcher_SetRawModeNonceFields_Input_struct_t;
+
+typedef struct {
+    gpMacDispatcher_SetRawModeNonceFields_Input_struct_t data;
+    MACAddress_t pExtendedAddress[1];
+} gpMacDispatcher_SetRawModeNonceFields_Input_marshall_struct_t;
 
 
 typedef struct {
@@ -2006,6 +2030,8 @@ typedef union {
     gpMacDispatcher_ScheduleTimedTx_Input_marshall_struct_t gpMacDispatcher_ScheduleTimedTx;
     gpMacDispatcher_SetStackInRawMode_Input_marshall_struct_t gpMacDispatcher_SetStackInRawMode;
     gpMacDispatcher_GetStackInRawMode_Input_marshall_struct_t gpMacDispatcher_GetStackInRawMode;
+    gpMacDispatcher_SetRawModeEncryptionKeys_Input_marshall_struct_t gpMacDispatcher_SetRawModeEncryptionKeys;
+    gpMacDispatcher_SetRawModeNonceFields_Input_marshall_struct_t gpMacDispatcher_SetRawModeNonceFields;
     gpMacDispatcher_EnableEnhancedFramePending_Input_marshall_struct_t gpMacDispatcher_EnableEnhancedFramePending;
     gpMacDispatcher_EnableRxWindows_Input_marshall_struct_t gpMacDispatcher_EnableRxWindows;
     gpMacDispatcher_DisableRxWindows_Input_marshall_struct_t gpMacDispatcher_DisableRxWindows;
@@ -2342,6 +2368,8 @@ void gpMacDispatcher_ScheduleTimedTx_Output_api2buf(UInt8Buffer* pDest , gpMacDi
 gpMarshall_AckStatus_t gpMacDispatcher_SetStackInRawMode_Input_buf2api(gpMacDispatcher_SetStackInRawMode_Input_marshall_struct_t* pDest , UInt8Buffer* pSource , UInt16* pIndex);
 gpMarshall_AckStatus_t gpMacDispatcher_GetStackInRawMode_Input_buf2api(gpMacDispatcher_GetStackInRawMode_Input_marshall_struct_t* pDest , UInt8Buffer* pSource , UInt16* pIndex);
 void gpMacDispatcher_GetStackInRawMode_Output_api2buf(UInt8Buffer* pDest , gpMacDispatcher_GetStackInRawMode_Output_marshall_struct_t* pSourceoutput , gpMacDispatcher_GetStackInRawMode_Input_marshall_struct_t* pSourceinput , UInt16* pIndex);
+gpMarshall_AckStatus_t gpMacDispatcher_SetRawModeEncryptionKeys_Input_buf2api(gpMacDispatcher_SetRawModeEncryptionKeys_Input_marshall_struct_t* pDest , UInt8Buffer* pSource , UInt16* pIndex);
+gpMarshall_AckStatus_t gpMacDispatcher_SetRawModeNonceFields_Input_buf2api(gpMacDispatcher_SetRawModeNonceFields_Input_marshall_struct_t* pDest , UInt8Buffer* pSource , UInt16* pIndex);
 gpMarshall_AckStatus_t gpMacDispatcher_EnableEnhancedFramePending_Input_buf2api(gpMacDispatcher_EnableEnhancedFramePending_Input_marshall_struct_t* pDest , UInt8Buffer* pSource , UInt16* pIndex);
 gpMarshall_AckStatus_t gpMacDispatcher_EnableRxWindows_Input_buf2api(gpMacDispatcher_EnableRxWindows_Input_marshall_struct_t* pDest , UInt8Buffer* pSource , UInt16* pIndex);
 gpMarshall_AckStatus_t gpMacDispatcher_DisableRxWindows_Input_buf2api(gpMacDispatcher_DisableRxWindows_Input_marshall_struct_t* pDest , UInt8Buffer* pSource , UInt16* pIndex);
@@ -2532,6 +2560,8 @@ void gpMacDispatcher_ScheduleTimedTx_Output_buf2par(gpMacCore_Result_t* result ,
 void gpMacDispatcher_SetStackInRawMode_Input_par2buf(UInt8Buffer* pDest , Bool rawModeEnabled , gpMacDispatcher_StackId_t stackId , UInt16* pIndex);
 void gpMacDispatcher_GetStackInRawMode_Input_par2buf(UInt8Buffer* pDest , gpMacDispatcher_StackId_t stackId , UInt16* pIndex);
 void gpMacDispatcher_GetStackInRawMode_Output_buf2par(Bool* rawModeEnabled , gpMacDispatcher_StackId_t stackId , UInt8Buffer* pSource , UInt16* pIndex);
+void gpMacDispatcher_SetRawModeEncryptionKeys_Input_par2buf(UInt8Buffer* pDest , gpMacCore_KeyIdMode_t encryptionKeyIdMode , gpMacCore_KeyIndex_t encryptionKeyId , UInt8* pCurrKey , gpMacDispatcher_StackId_t stackId , UInt16* pIndex);
+void gpMacDispatcher_SetRawModeNonceFields_Input_par2buf(UInt8Buffer* pDest , UInt32 frameCounter , MACAddress_t* pExtendedAddress , UInt8 seclevel , gpMacDispatcher_StackId_t stackId , UInt16* pIndex);
 void gpMacDispatcher_EnableEnhancedFramePending_Input_par2buf(UInt8Buffer* pDest , Bool enableEnhancedFramePending , gpMacDispatcher_StackId_t stackId , UInt16* pIndex);
 void gpMacDispatcher_EnableRxWindows_Input_par2buf(UInt8Buffer* pDest , UInt32 dutyCycleOnTime , UInt32 dutyCyclePeriod , UInt16 recurrenceAmount , UInt32 startTime , gpMacDispatcher_StackId_t stackId , UInt16* pIndex);
 void gpMacDispatcher_DisableRxWindows_Input_par2buf(UInt8Buffer* pDest , gpMacDispatcher_StackId_t stackId , UInt16* pIndex);

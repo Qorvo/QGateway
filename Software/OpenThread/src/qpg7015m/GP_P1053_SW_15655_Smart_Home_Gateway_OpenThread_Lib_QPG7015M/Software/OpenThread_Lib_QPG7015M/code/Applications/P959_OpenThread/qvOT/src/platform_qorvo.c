@@ -24,9 +24,9 @@
  * INCIDENTAL OR CONSEQUENTIAL DAMAGES,
  * FOR ANY REASON WHATSOEVER.
  *
- * $Header: //depot/main/Embedded/Applications/P959_OpenThread/v1.2.0.1/comps/qvOT/src/platform_qorvo.c#1 $
- * $Change: 195340 $
- * $DateTime: 2022/06/17 14:57:48 $
+ * $Header: //depot/release/Embedded/Applications/P959_OpenThread/v1.2.0.2/comps/qvOT/src/platform_qorvo.c#1 $
+ * $Change: 198093 $
+ * $DateTime: 2022/12/05 12:18:00 $
  *
  */
 

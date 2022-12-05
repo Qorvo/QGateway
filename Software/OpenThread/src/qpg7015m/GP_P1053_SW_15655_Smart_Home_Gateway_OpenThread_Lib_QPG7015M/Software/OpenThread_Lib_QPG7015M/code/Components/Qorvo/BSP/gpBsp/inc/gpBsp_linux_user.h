@@ -29,9 +29,9 @@
  * INCIDENTAL OR CONSEQUENTIAL DAMAGES,
  * FOR ANY REASON WHATSOEVER.
  *
- * $Header: //depot/main/Embedded/Components/Qorvo/BSP/v2.10.3.1/comps/gpBsp/inc/gpBsp_linux_user.h#1 $
- * $Change: 195340 $
- * $DateTime: 2022/06/17 14:57:48 $
+ * $Header: //depot/release/Embedded/Components/Qorvo/BSP/v2.10.3.1/comps/gpBsp/inc/gpBsp_linux_user.h#1 $
+ * $Change: 197210 $
+ * $DateTime: 2022/10/13 16:52:00 $
  *
  */
 

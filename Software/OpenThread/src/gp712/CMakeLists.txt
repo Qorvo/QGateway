@@ -29,6 +29,7 @@
 list(APPEND OT_PLATFORM_DEFINES
     "_BSD_SOURCE=1"
     "_DEFAULT_SOURCE=1"
+    "OPENTHREAD_CONFIG_LOG_LEVEL_DYNAMIC_ENABLE=1"
 )
 
 target_compile_definitions(ot-config INTERFACE

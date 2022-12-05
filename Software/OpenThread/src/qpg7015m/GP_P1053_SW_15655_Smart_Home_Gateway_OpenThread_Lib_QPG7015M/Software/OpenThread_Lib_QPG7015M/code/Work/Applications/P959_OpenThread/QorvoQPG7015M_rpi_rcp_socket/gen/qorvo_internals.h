@@ -65,6 +65,7 @@
 #define GP_COMPONENT_ID_RESET                              33
 #define GP_COMPONENT_ID_RXARBITER                          2
 #define GP_COMPONENT_ID_SCHED                              9
+#define GP_COMPONENT_ID_SILEXCRYPTOSOC                     54
 #define GP_COMPONENT_ID_STAT                               22
 #define GP_COMPONENT_ID_UTILS                              4
 #define GP_COMPONENT_ID_VERSION                            129

@@ -41,6 +41,8 @@ cmake_install.cmake
 .vscode/**
 cmake-build-*/**
 /tags
+.project
+.pydevproject
 
 # Python bytecodes
 __pycache__

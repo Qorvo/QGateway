@@ -1,5 +1,5 @@
 Package created from:
-Applications/P959_OpenThread/v1.2.0.1/apps/lib_qorvo/qpg7015m_rpi_cli_mtd_socket.py - commit reference 196357
+Applications/P959_OpenThread/v1.2.0.2/apps/lib_qorvo/qpg7015m_rpi_cli_mtd_socket.py - commit reference 198093
 
 Components in source:
 ---------------------
@@ -11,8 +11,8 @@ gpEncryption                   - Components/Qorvo/BaseUtils/v2.10.3.1
 gpLog                          - Components/Qorvo/OS/v2.10.3.1
 gpMacCore                      - Components/Qorvo/802_15_4/v2.10.3.1
 gpMacDispatcher                - Components/Qorvo/802_15_4/v2.10.3.1
-gpPad                          - Components/Qorvo/HAL_RF/v2.10.3.1
-gpPd                           - Components/Qorvo/HAL_RF/v2.10.3.1
+gpPad                          - Components/Qorvo/HAL_RF/v2.10.3.2
+gpPd                           - Components/Qorvo/HAL_RF/v2.10.3.2
 gpPoolMem                      - Components/Qorvo/OS/v2.10.3.1
 gpRandom                       - Components/Qorvo/BaseUtils/v2.10.3.1
 gpReset                        - Components/Qorvo/OS/v2.10.3.1
@@ -22,9 +22,10 @@ gpStat                         - Components/Qorvo/BaseUtils/v2.10.3.1
 gpUtils                        - Components/Qorvo/BaseUtils/v2.10.3.1
 gpVersion                      - Components/Qorvo/OS/v2.10.3.1
 gpWmrk                         - Components/Qorvo/BaseUtils/v2.10.3.1
-gphal                          - Components/Qorvo/HAL_RF/v2.10.3.1
+gphal                          - Components/Qorvo/HAL_RF/v2.10.3.2
 halLinux                       - Components/Qorvo/HAL_PLATFORM/v2.10.3.1
-qvOT                           - Applications/P959_OpenThread/v1.2.0.1
+qvOT                           - Applications/P959_OpenThread/v1.2.0.2
+silexCryptoSoc                 - Components/Qorvo/HAL_PLATFORM/v2.10.3.1
 
 Repositories:
 ---------------------

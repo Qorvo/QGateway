@@ -4,9 +4,11 @@ QGateway repository is intended to host Qorvo Smart Home Gateway related code.
 
 Currently repository contains only OpenThread on Qorvo example code from [openthread/ot-qorvo](https://github.com/openthread/ot-qorvo) with included source code for drivers and platform libraries.
 
-# QPG7015M Development Kit
+# Qorvo<sup>&reg;</sup> IoT Dev Kit Pro
 
-An introduction to our QPG7015M Development Kit is available in its [Product Brief](Documents/Product%20Briefs/SW100722_SDP006_PB_QPG7015M_Development_Kit.pdf)
+An introduction to our Qorvo<sup>&reg;</sup> IoT Dev Kit Pro, which contains the QPG7015M Gateway is available in our [QMatter repository](https://github.com/Qorvo/QMatter/blob/master/Qorvo_IoT_Dev_Kit_Pro.md).
+
+To get started with the QPG7015M Gateway check out its [Programmer Manual](Documents/Programmer%20Manuals/GP_P1053_UM_17043_Programmer_Manual.pdf)
 
 # License
 
@@ -29,7 +31,7 @@ Thread examples are available for the GP712 Evaluation kit with Raspberry Pi. Se
 
 ### QPG7015M setup
 
-Thread examples are available for the QPG7015M Evaluation kit with Raspberry Pi. See [QPG7015M instructions](Documents/Guides/user_manual_ot_qpg7015M.md) to setup an OpenThread application on this platform.
+Thread examples are available for the QPG7015M Gateway. See [QPG7015M instructions](Documents/Guides/user_manual_ot_qpg7015M.md) to setup an OpenThread application on this platform.
 
 # More information
 

@@ -25,9 +25,9 @@
  * modified BSD License or the 3-clause BSD License as published by the Free
  * Software Foundation @ https://directory.fsf.org/wiki/License:BSD-3-Clause
  *
- * $Header: //depot/main/Embedded/Components/Qorvo/802_15_4/v2.10.3.1/comps/gpMacDispatcher/src/gen/gpMacDispatcher_marshalling_client.c#4 $
- * $Change: 195905 $
- * $DateTime: 2022/07/08 07:46:42 $
+ * $Header: //depot/release/Embedded/Components/Qorvo/802_15_4/v2.10.3.1/comps/gpMacDispatcher/src/gen/gpMacDispatcher_marshalling_client.c#1 $
+ * $Change: 197210 $
+ * $DateTime: 2022/10/13 16:52:00 $
  */
 
 /** @file "gpMacDispatcher_marshalling_client.c"
@@ -1266,7 +1266,45 @@ void gpMacDispatcher_GetStackInRawMode_Output_buf2par(Bool* rawModeEnabled , gpM
     NOT_USED(stackId);
 }
 
+void gpMacDispatcher_SetRawModeEncryptionKeys_Input_par2buf(UInt8Buffer* pDest , gpMacCore_KeyIdMode_t encryptionKeyIdMode , gpMacCore_KeyIndex_t encryptionKeyId , UInt8* pCurrKey , gpMacDispatcher_StackId_t stackId , UInt16* pIndex)
+{
+    gpMacCore_KeyIdMode_t_api2buf_1(pDest, &(encryptionKeyIdMode), pIndex);
+    gpMacCore_KeyIndex_t_api2buf_1(pDest, &(encryptionKeyId), pIndex);
+    pDest[(*pIndex)++] = (NULL == pCurrKey);
+    if (NULL != pCurrKey)
+    {
+        UInt8_api2buf(pDest, pCurrKey, 16, pIndex);
+    }
+    else
+    {
+        if (true == gpMacDispatcher_GetDummyDataInsertion())
+        {
+            MEMSET(&(pDest[(*pIndex)]) , 0x00 , 16);
+            (*pIndex) += 16;
+        }
+    }
+    gpMacDispatcher_StackId_t_api2buf_1(pDest, &(stackId), pIndex);
+}
 
+void gpMacDispatcher_SetRawModeNonceFields_Input_par2buf(UInt8Buffer* pDest , UInt32 frameCounter , MACAddress_t* pExtendedAddress , UInt8 seclevel , gpMacDispatcher_StackId_t stackId , UInt16* pIndex)
+{
+    UInt32_api2buf_1(pDest, &(frameCounter), pIndex);
+    pDest[(*pIndex)++] = (NULL == pExtendedAddress);
+    if (NULL != pExtendedAddress)
+    {
+        MACAddress_t_api2buf_1(pDest, pExtendedAddress, pIndex);
+    }
+    else
+    {
+        if (true == gpMacDispatcher_GetDummyDataInsertion())
+        {
+            MEMSET(&(pDest[(*pIndex)]) , 0x00 , 8*1);
+            (*pIndex) += 8*1;
+        }
+    }
+    UInt8_api2buf_1(pDest, &(seclevel), pIndex);
+    gpMacDispatcher_StackId_t_api2buf_1(pDest, &(stackId), pIndex);
+}
 
 void gpMacDispatcher_EnableEnhancedFramePending_Input_par2buf(UInt8Buffer* pDest , Bool enableEnhancedFramePending , gpMacDispatcher_StackId_t stackId , UInt16* pIndex)
 {

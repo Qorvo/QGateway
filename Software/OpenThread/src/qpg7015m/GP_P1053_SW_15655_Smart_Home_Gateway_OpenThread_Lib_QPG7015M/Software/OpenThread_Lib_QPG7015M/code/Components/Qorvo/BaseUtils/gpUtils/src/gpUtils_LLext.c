@@ -29,9 +29,9 @@
  * modified BSD License or the 3-clause BSD License as published by the Free
  * Software Foundation @ https://directory.fsf.org/wiki/License:BSD-3-Clause
  *
- * $Header: //depot/main/Embedded/Components/Qorvo/BaseUtils/v2.10.3.1/comps/gpUtils/src/gpUtils_LLext.c#1 $
- * $Change: 195340 $
- * $DateTime: 2022/06/17 14:57:48 $
+ * $Header: //depot/release/Embedded/Components/Qorvo/BaseUtils/v2.10.3.1/comps/gpUtils/src/gpUtils_LLext.c#1 $
+ * $Change: 197210 $
+ * $DateTime: 2022/10/13 16:52:00 $
  *
  */
 
