@@ -8,15 +8,14 @@
 | ---                       | ---       | ---               | ---           | ---   |
 | BLE Controller QPG7015M   | 163591    | D056523           | 5.2           | [https://launchstudio.bluetooth.com/ListingDetails/123871](https://launchstudio.bluetooth.com/ListingDetails/123871) |
 | BLE Host Stack            | 146344    | D049426           | 5.2           | [https://launchstudio.bluetooth.com/ListingDetails/103670](https://launchstudio.bluetooth.com/ListingDetails/103670) |
-| BLE profiles subsystem    | N/A       | N/A               | N/A           | Not certified but verified with the TCRL.2018-2 compliance tester using Bluetooth Profile Tuning Suites 7.3.0. **Please include testing for the BLE profiles included in your end-product listing.** |
 
 **End-product certification instructions**
 
 SDK users can reference Qorvo QDIDs (see above) in their End Product Listing (EPL)
 - 1 BLE controller subsystem: Supplied by Qorvo SDK
 - 1 BLE host subsystem: Supplied by Qorvo SDK
-- \[optional\] Profile subsystem: **No certified subsystem in this SDK**
-    - When modifying the profiles from the SDK or when the subsystem was not certified, one should selectively test the modified/non-certified profiles using the [profile-tuning-suite](https://www.bluetooth.com/develop-with-bluetooth/qualification-listing/qualification-test-tools/profile-tuning-suite/). Results of the Profile Tuning Suite tests should be verified by a [Bluetooth Qualification Test Facility (BQTF)](https://www.bluetooth.com/develop-with-bluetooth/qualification-listing/qualification-test-facilities).
+- \[optional\] Profile subsystem: **Not provided in the SDK**
+    - When adding industry standard BLE GATT-based profile clients to your BLE central device, please follow the instructions here how to [Qualify a GATT-Based Profile Client](https://support.bluetooth.com/hc/en-us/articles/360049491611-Qualify-a-GATT-Based-Profile-Client).
 ### Thread
 
 **Certification overview:**
