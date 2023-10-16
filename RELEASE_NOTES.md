@@ -10,6 +10,8 @@
 
 - Feat(BleAdapter): A start scanning request can now wait (blocking function) until an ongoing scanning stop request is handled. Closes APPSCS-1150
 
+- Feat(Thread) QPG7015M Thread Component certification for Thread 1.3, more info see [Certification.md](./Certification.md#thread)
+
 ### Fixed Bugs
 
 - Fix(Thread): Pulled in a security fix from OpenThread which blocks the security gap that allowed injection of arbitrary IPv6 datagrams without possession of the Thread Network Key. Closes: SDP011-1773
