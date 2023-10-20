@@ -1,0 +1,7 @@
+[submodule "third_party/openthread"]
+        branch = main
+	path = ThirdParty/openthread
+	url = https://github.com/openthread/openthread.git
+[submodule "ThirdParty/tool_rpi"]
+	path = ThirdParty/tool_rpi
+	url = https://github.com/raspberrypi/tools.git

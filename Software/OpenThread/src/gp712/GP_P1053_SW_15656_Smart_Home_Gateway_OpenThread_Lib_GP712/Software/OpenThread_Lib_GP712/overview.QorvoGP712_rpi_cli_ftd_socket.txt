@@ -1,0 +1,32 @@
+Package created from:
+Applications/P959_OpenThread/v1.2.0.4/apps/lib_qorvo/gp712_rpi_cli_ftd_socket.py - commit reference 2334f506f9cba16a755256babb1eb0a69878a600
+
+Components in source:
+---------------------
+gpAssert                       - Components/Qorvo/OS/vlatest
+gpBaseComps                    - Components/Qorvo/OS/vlatest
+gpBsp                          - Components/Qorvo/BSP/vlatest
+gpCom                          - Components/Qorvo/BaseUtils/vlatest
+gpEncryption                   - Components/Qorvo/BaseUtils/vlatest
+gpLog                          - Components/Qorvo/OS/vlatest
+gpMacCore                      - Components/Qorvo/802_15_4/vlatest
+gpMacDispatcher                - Components/Qorvo/802_15_4/vlatest
+gpPad                          - Components/Qorvo/HAL_RF/vlatest
+gpPd                           - Components/Qorvo/HAL_RF/vlatest
+gpPoolMem                      - Components/Qorvo/OS/vlatest
+gpRandom                       - Components/Qorvo/BaseUtils/vlatest
+gpReset                        - Components/Qorvo/OS/vlatest
+gpRxArbiter                    - Components/Qorvo/802_15_4/vlatest
+gpSched                        - Components/Qorvo/OS/vlatest
+gpStat                         - Components/Qorvo/BaseUtils/vlatest
+gpUtils                        - Components/Qorvo/BaseUtils/vlatest
+gpVersion                      - Components/Qorvo/OS/vlatest
+gpWmrk                         - Components/Qorvo/BaseUtils/vlatest
+gphal                          - Components/Qorvo/HAL_RF/vlatest
+halLinux                       - Components/Qorvo/HAL_PLATFORM/v2.10.3.1
+qvOT                           - Applications/P959_OpenThread/v1.2.0.4
+
+Repositories:
+---------------------
+P959_ot-qorvo                  - P959_ot-qorvo/v1.2.0.4
+
